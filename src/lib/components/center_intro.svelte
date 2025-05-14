@@ -10,7 +10,7 @@
 		</p>
 		<div class="flex items-center gap-2 sm:gap-4 ">
 			<img 
-				src="./src/lib/assets/images/sekey1.JPG" 
+				src="https://media-hosting.imagekit.io/2c4db4f389f141d4/download.jpeg?Expires=1841859541&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=2-7MHQ4nFXlpsEl9b3JFSsGQftkRCID53VfRCEqLhHieO41mm0gLI8BzjJuBOBlhgVpufaB0CVZYlNmwxaJZp97~JobVNkD66PGVPSCWgDeBgePAnoU6cgIeYi9lsbqauqkgTcgZqpg6BLwPI2MAMVKT8kLDG7pWRV-rS9woS~cRr4QJgziWdZ1Lf7IO19SCR1VsQNowV~2hRe5i1bs5KYWdItIJlHqUY3o2-bIm0B4vIbtzZBe3noBlNgJYXdI9zsZJ6MMGS8g82yzAoYhgZnF1llrSWYjoKHQ8qneH~VCJpcY-MkEh8hT8g-x5ZJ16HkzxWT1Ep-S~3JPBN99-dg__" 
 				alt="Elikem Sek" 
 				class="rounded-full w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-cover shadow-md border-2 border-gray-200 hover: transition-shadow duration-300 hover:scale-180"
 				width="60"

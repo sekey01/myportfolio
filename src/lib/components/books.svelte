@@ -6,19 +6,19 @@
 			title: "The Pragmatic Programmer",
 			author: "Andrew Hunt and David Thomas",
 			description: "A guide to becoming a better programmer, covering best practices and practical tips.",
-			imageUrl: "../src/lib/assets/images/programmer.jpeg"
+			imageUrl: "https://media-hosting.imagekit.io/37f2d0bf47654f34/programmer.jpeg?Expires=1841859403&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=mY3EC078Zzt4oVjjkaoREjqiZHEhh0uR7YUcB2Cdy7t4qK6O64lCz4Sg3AF7e9ZsRCiru1sGUAw4fO~eM-ErZMf-vyUZ4GJJXE8EjD9uvyZbRjaYPIDSnQoBUrnMAVYsT1dUqyXTpdekghDj3ECwHFmgptC7ZfY~hGD~eF~niG8fpXTuiLoaQWUKOG6Z0q-a9KcW2-jxw3QXtyFPafMBfdhQ40yqwhIdpaU0DFVryaqWIHXkKpjrDhzm79DlasFf89s5utDVb-djZUtxnorfG28xCFa-drTB2New9V6kHSQo1dRUxjoVFTlPJUZOELBEOYoPrxzoAnrYoIt9FQ5Rtw__"
 		},
 		{
 			title: "Clean Code",
 			author: "Robert C. Martin",
 			description: "A guide to writing clean, maintainable code with practical examples.",
-			imageUrl: "../src/lib/assets/images/clean.jpeg"
+			imageUrl: "https://media-hosting.imagekit.io/7f528535c46949e5/clean.jpeg?Expires=1841859031&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=C1uP4bMbU8t15N3vf~R848t95om-M23i~sW6yV5Qpr-ouSn-kDngIsDBSLv2Ad18wQQbzv0zw9ys9G6DAa5lxbE30z6OBlTJJiTU6ZLhnKJPPAVxopEpgKRlUgWV1UdxnOOD8O2WGlEilc6lsRBmvj9aX3i0MpzPYLkTlk52kIer3g69TM~6I~vAg~~DMA5FWe9Rg8lBroi8yLlXySDJTj3~T9ZSqWOqoxXCgy7~JPhhCKQDkkDtdtQbAB-qpZlawq-9ZOaGUxZJvWTlF8In8c5hSNC6o1BHzoSQqiP8NyMXgadC6iJj6ynKeSyXOQk9t5M80tSoJ-snLo7naKhhKQ__"
 		},
 		{
 			title: "Mindset Matters",
 			author: "Joel Austin",
 			description: "A book that emphasizes the power of a positive mindset and its impact on success.",
-			imageUrl: "../src/lib/assets/images/entrepreneur.jpeg"
+			imageUrl: "https://media-hosting.imagekit.io/dae65472b95844bf/entrepreneur.jpeg?Expires=1841859031&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=QtMvA5tt193Yma1z7CohYDceYuJlcCsgu~1cdxi4m~bEPDDdqg2GPKQoaRCt8BBuzp-6l-mFVwmvIHxfmm-kGCgjX96dyPxp6jmzv~y~SDodGlLT9XKbg1y3p6ghSlb1eQEYuFm-iBPdy2BNModJR9nGPGEmuLMEYHwlHpoqrLVYfyt6xLyvlFAJnCtOjFCJE5GXWi-2GCxVYQfh~6tpYTCBmj68vZNzcJEY8XQcckW3nsT1CZsZATcXaZLzzBjT3Iq7HI7nJdzz49ULmnul0cnoryH4GghEFkvlsBG69hmnsV2nZjVZubTJg59o8uH8eHdS~fCZtNDW-MOesgv5Rg__"
 		}
 	];
 </script>
