@@ -19,16 +19,16 @@
             background-color: black;
             border-radius: 2rem;
             font-weight: bold;
-            width: 250px;
+            width: 251px;
             font-family: fantasy; 
-            font-size: 12px;
+            font-size: 13px;
             margin-top: 30px;
             border-top-right-radius: 130px;
 
         }
         .h2{
             position: absolute;
-            top: 1px;
+            top: 2px;
             color: black;
             text-align: center;
             background-color: white;

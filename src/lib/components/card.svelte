@@ -1,23 +1,27 @@
 <script>
   // Import the image URL from the assets folder
-  export let profileImageUrl = "../src/lib/assets/images/sekey1.JPG";
+  export let imageUrl ;
+  export let title;
+  export let author;
+  export let description;
+
 </script>
 
 
 
 <div class="card">
-    <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGltYWdlfGVufDB8fHx8MTY5MjQ1NzE3Ng&ixlib=rb-4.0.3&q=80&w=1080"
+    <img src="{imageUrl}"
      alt="Placeholder" />
      <div class ="profile">
-        <img src= {profileImageUrl}
+        <img src= {imageUrl}
         style="width: 100%; height: 100%; object-fit: cover;"
          alt="Placeholder" />
 
      </div>
     <div class="card-content">
-      <h2 class="h2">Elikem Sek</h2>
-      <p class="desc">A passionate Mobile & Web App Dev</p>
-      <p class="desc2">I believe in Solving problems and there's solution to every problem on this earth</p>
+      <h2 class="h2">{title}</h2>
+      <p class="desc">{description}</p>
+      <p class="desc2">{author}</p>
     </div>
   </div>
   
@@ -49,8 +53,8 @@
     }
     .h2 {
       color: white;
-      font-size: 50px;
-      font-family:fantasy;
+      font-size: 20px;
+      font-family:serif;
       text-align: center;
       margin-top: 20px;
     }
@@ -82,7 +86,7 @@
       padding: 20px;
       background: linear-gradient(
         to top, 
-        rgba(237, 40, 40, 0.7) 0%, 
+        rgba(40, 32, 32, 0.7) 0%, 
         transparent 100%
       );
       color: white;
