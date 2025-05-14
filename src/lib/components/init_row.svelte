@@ -5,7 +5,7 @@
     
     <div class="flex flex-col md:flex-row items-center gap-3 md:gap-6 lg:gap-6 w-full md:w-auto pl-4">
         <!-- Profile Image - Always visible but size adjusts -->
-        <img src="./src/lib/assets/images/phi.png" alt="Elikem Sek" class="rounded-full w-12 h-12 md:w-10 md:h-10 object-cover shadow-lg" />
+        <img src="./src/lib/assets/images/ph.png" alt="Elikem Sek" class="rounded-full w-12 h-12 md:w-10 md:h-10 object-cover shadow-lg" />
 
         <!-- Email - Stacked on mobile, inline on desktop -->
         <p class="font-serif font-thin text-sm md:text-xl whitespace-nowrap">elikemsek@gmail.com</p>
