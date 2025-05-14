@@ -5,7 +5,7 @@
     
     <div class="flex flex-col md:flex-row items-center gap-3 md:gap-6 lg:gap-6 w-full md:w-auto pl-4">
         <!-- Profile Image - Always visible but size adjusts -->
-        <img src="https://imagekit.io/tools/asset-public-link?detail=%7B%22name%22%3A%22phi.png%22%2C%22type%22%3A%22image%2Fpng%22%2C%22signedurl_expire%22%3A%222028-05-13T19%3A18%3A32.088Z%22%2C%22signedUrl%22%3A%22https%3A%2F%2Fmedia-hosting.imagekit.io%2Fc68829e4afb74735%2Fphi.png%3FExpires%3D1841858312%26Key-Pair-Id%3DK2ZIVPTIP2VGHC%26Signature%3DQvlAEPCOhlokrjsHnN7s8kw9e0W950RRg2N2NJTifu74M685aZryb01InCyzF49JoUjc2MrKOmljEz8h-SdxhRHHCLjnQRAhNuQ4dQzUCTD4prvb2P7qE~Taf39G8Z0O~EAg6C0MvxqXQh5aDFDe7gn5jqvq0XelizILicmon7HugtLm~cCTLMjM5BTTgizNCjblnNxo7YFBKXVVxJ4yI1uUp4viKt6FAHmtaLyv~u-jmOw2EtPwHqAxZaV-PB1ALHazdVesQK8euDzTWZ5DkhQaiqp-YklLniZBcV8mYgVrNI40SiYB9WWy63gGf2RX3QMr2LpkeXOopBOqt-UyPg__%22%7D" alt="Elikem Sek" class="rounded-full w-12 h-12 md:w-10 md:h-10 object-cover shadow-lg" />
+        <img src="https://media-hosting.imagekit.io/c68829e4afb74735/phi.png?Expires=1841858312&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=QvlAEPCOhlokrjsHnN7s8kw9e0W950RRg2N2NJTifu74M685aZryb01InCyzF49JoUjc2MrKOmljEz8h-SdxhRHHCLjnQRAhNuQ4dQzUCTD4prvb2P7qE~Taf39G8Z0O~EAg6C0MvxqXQh5aDFDe7gn5jqvq0XelizILicmon7HugtLm~cCTLMjM5BTTgizNCjblnNxo7YFBKXVVxJ4yI1uUp4viKt6FAHmtaLyv~u-jmOw2EtPwHqAxZaV-PB1ALHazdVesQK8euDzTWZ5DkhQaiqp-YklLniZBcV8mYgVrNI40SiYB9WWy63gGf2RX3QMr2LpkeXOopBOqt-UyPg__" alt="Elikem Sek" class="rounded-full w-12 h-12 md:w-10 md:h-10 object-cover shadow-lg" />
 
         <!-- Email - Stacked on mobile, inline on desktop -->
         <p class="font-serif font-thin text-sm md:text-xl whitespace-nowrap">elikemsek@gmail.com</p>
