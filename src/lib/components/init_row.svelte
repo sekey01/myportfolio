@@ -1,29 +1,40 @@
 <script lang="ts">
+  import Socials from "./socials.svelte";
+
+  // Image paths - consider importing or using a more maintainable approach
+  const backgroundImage = "https://i.ibb.co/Mkn5nRxn/eli.png";
+  const profileImage = "./src/lib/assets/images/phi.png";
 </script>
 
-<div class="relative flex flex-col md:flex-row items-center justify-between p-2 w-full max-w-4xl mx-auto bg-gradient-to-r from-orange-200 to-orange-100 rounded-lg shadow-lg hover: transition-shadow duration-300 hover:scale-190">
-    
-    <div class="flex flex-col md:flex-row items-center gap-3 md:gap-6 lg:gap-6 w-full md:w-auto pl-4">
-        <!-- Profile Image - Always visible but size adjusts -->
-        <img src="https://media-hosting.imagekit.io/c68829e4afb74735/phi.png?Expires=1841858312&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=QvlAEPCOhlokrjsHnN7s8kw9e0W950RRg2N2NJTifu74M685aZryb01InCyzF49JoUjc2MrKOmljEz8h-SdxhRHHCLjnQRAhNuQ4dQzUCTD4prvb2P7qE~Taf39G8Z0O~EAg6C0MvxqXQh5aDFDe7gn5jqvq0XelizILicmon7HugtLm~cCTLMjM5BTTgizNCjblnNxo7YFBKXVVxJ4yI1uUp4viKt6FAHmtaLyv~u-jmOw2EtPwHqAxZaV-PB1ALHazdVesQK8euDzTWZ5DkhQaiqp-YklLniZBcV8mYgVrNI40SiYB9WWy63gGf2RX3QMr2LpkeXOopBOqt-UyPg__" alt="Elikem Sek" class="rounded-full w-12 h-12 md:w-10 md:h-10 object-cover shadow-lg" />
+<div class="relative w-full h-64 md:h-[150px] bg-gray-100 overflow-hidden">
+  <!-- Background Image -->
+  <img 
+    src={backgroundImage} 
+    alt="Background" 
+    class="w-full h-full object-cover object-center"
+  />
 
-        <!-- Email - Stacked on mobile, inline on desktop -->
-        <p class="font-serif font-thin text-sm md:text-xl whitespace-nowrap">elikemsek@gmail.com</p>
-      
-        <!-- Phone Number - Smaller on mobile -->
-        <p class="font-serif text-xs md:text-sm whitespace-nowrap">+233 55 376 7177</p>
-        <!-- Location - Stacked on mobile, inline on desktop -->
-        <p class="font-serif text-xs md:text-sm whitespace-nowrap">Accra, Ghana</p>
-        
+  <!-- Content Overlay -->
+  <div class="absolute inset-0 bg-black/30 flex items-start justify-start p-5">
+    <div class="flex flex-col gap-2 sm:gap-3 md:gap-4 lg:gap-5">
+      <!-- Profile Image -->
+      <img 
+        src={profileImage} 
+        alt="Elikem Sek" 
+        class="rounded-full w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-cover shadow-md border-2 border-gray-200 hover:shadow-lg transition-all duration-300 hover:scale-105"
+        width="60" 
+        height="60"
+      />
+
+      <!-- Name Section -->
+      <div class="text-white">
+        <h1 class="text-3xl sm:text-4xl font-extrabold font-serif leading-tight">Elikem</h1>
+        <h2 class="text-2xl sm:text-3xl font-bold font-serif">Sek.</h2>
+        <div class="h-1 w-10 bg-amber-400 my-2"></div>
+      </div>
+
+      <!-- Socials Component -->
+      <Socials />
     </div>
-
-    <!-- Menu Button - Position changes based on screen size -->
-    <!-- svelte-ignore a11y_consider_explicit_label -->
-    <button class="mt-2 md:mt-0 bg-green-200 rounded-full p-2 hover:bg-gray-300 transition-colors self-end md:self-auto ">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-        
-        
-    </button>
+  </div>
 </div>

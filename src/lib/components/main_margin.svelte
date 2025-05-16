@@ -8,29 +8,19 @@
 </script>
 
 <div class="main-page">
-	<div class=" p-8 overflow-y-auto"> <!-- Changed from fixed to scrollable container -->
-		<div class="flex flex-col gap-20 max-w-6xl mx-auto space-y-2  "> <!-- Added max-width and spacing -->
-			<InitRow />
+<InitRow/>
+<CenterIntro/>
+<Experiences/>
 
-			<CenterIntro />
 
-			<Socials />	
-    </div>
-			
-			<div class="flex flex-col items-center justify-center space-x-10 mt-20 mb-20">
-				<Books />
-				<Experiences />
-				<Projects />
-
-			</div>
-	</div>
 </div>
 
 <style>
 	.main-page {
+		padding:40px;
 		margin: 0 auto;
 		height: 300vh;
-		background-color: #ededf3;
+		background-color: #000000;
 		overflow: scroll; /* Prevents double scrollbars */
 	}
 
@@ -39,7 +29,7 @@
 		width: 8px;
 	}
 	::-webkit-scrollbar-track {
-		background: #f9f8f8;
+		background: #8b9b9a;
 	}
 	::-webkit-scrollbar-thumb {
 		background: #888;
