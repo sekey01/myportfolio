@@ -19,25 +19,32 @@
 
 <style>
 	.main-page {
-		padding:40px;
+		padding: 40px;
 		margin: 0 auto;
-		height: 300vh;
+		min-height: 100vh; /* Changed from fixed height */
 		background-color: #000000;
-		overflow: scroll; /* Prevents double scrollbars */
+		overflow-x: hidden; /* Prevents horizontal scroll */
 	}
 
-	/* Optional: Custom scrollbar styling */
-	::-webkit-scrollbar {
-		width: 8px;
+	/* Improved scrollbar styling */
+	:global(html) {
+		scroll-behavior: smooth;
 	}
-	::-webkit-scrollbar-track {
-		background: #8b9b9a;
+	
+	:global(::-webkit-scrollbar) {
+		width: 10px;
 	}
-	::-webkit-scrollbar-thumb {
-		background: #888;
-		border-radius: 4px;
+	
+	:global(::-webkit-scrollbar-track) {
+		background: #1a1a1a;
 	}
-	::-webkit-scrollbar-thumb:hover {
-		background: #555;
+	
+	:global(::-webkit-scrollbar-thumb) {
+		background: #facc15; /* Yellow to match your theme */
+		border-radius: 5px;
+	}
+	
+	:global(::-webkit-scrollbar-thumb:hover) {
+		background: #eab308; /* Darker yellow on hover */
 	}
 </style>

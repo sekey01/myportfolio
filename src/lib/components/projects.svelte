@@ -6,21 +6,21 @@
         title: "MealMate Delivery App",
         author: "Elikem Sek",
         description: "A mobile app for food delivery, allowing users to order meals from local restaurants.",
-        imageUrl: "https://media-hosting.imagekit.io/21c691b9e9ea435c/logo.png",
+        imageUrl: "https://cdn.vectorstock.com/i/2000v/43/65/food-delivery-icon-set-vector-4904365.avif",
         tags: ["Flutter", "Firebase", "UI/UX"]
     },
     {
         title: "KW-Machines",
         author: "Elikem Sek",
         description: "A web app for managing and tracking machine operations.",
-        imageUrl: "https://media-hosting.imagekit.io/9daa17777f974dc0/machine.jpeg",
+        imageUrl: "https://media.istockphoto.com/id/1629004972/vector/helmet-and-gear-safety-and-protection-engineer-construction-labor-and-engineering-symbols.jpg?s=612x612&w=0&k=20&c=2Yu-It1BrUTjgai1e6WJvr7sO8hbqHtCgT02rjxfb-U=",
         tags: ["React", "Node.js", "MongoDB"]
     },
     {
         title: "Exeat Keeper App(Android)",
         author: "Elikem Sek",
         description: "A mobile app for managing and tracking senior high school students in and off Campus.",
-        imageUrl: "https://media-hosting.imagekit.io/e48d3aa3ff7d4eb1/exeat.png",
+        imageUrl: "https://images.vexels.com/media/users/3/224234/isolated/preview/ff7c525c1c3e1bef640644542001e1fd-online-school-logo.png",
         tags: ["Android", "Kotlin", "Firebase"]
     }
    ]
