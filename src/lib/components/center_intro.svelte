@@ -5,7 +5,7 @@
 <div class="flex flex-col items-center px-4 sm:px-6 bg-black text-white">
 	<!-- Profile Section -->
 	<div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 py-8">
-		<p class="text-yellow-400 text-4xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight text-center sm:text-left">
+		<p class="text-gray-200 text-4xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight text-center sm:text-left">
 			Hi there! I'm
 		</p>
 		<div class="flex items-center gap-2 sm:gap-4">

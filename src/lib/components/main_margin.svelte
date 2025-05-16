@@ -2,6 +2,7 @@
 	import Books from './books.svelte';
 	import CenterIntro from "./center_intro.svelte";
 	import Experiences from './experiences.svelte';
+	import Footer from './footer.svelte';
 	import InitRow from "./init_row.svelte";
 	import Projects from './projects.svelte';
 	import Socials from './socials.svelte';
@@ -11,7 +12,8 @@
 <InitRow/>
 <CenterIntro/>
 <Experiences/>
-
+<Projects/>
+<Footer/>
 
 </div>
 

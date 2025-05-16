@@ -1,9 +1,10 @@
 <script lang="ts">
-  import Socials from "./socials.svelte";
+	import Socials from "./socials.svelte";
+
 
   // Image paths - consider importing or using a more maintainable approach
   const backgroundImage = "https://i.ibb.co/Mkn5nRxn/eli.png";
-  const profileImage = "./src/lib/assets/images/phi.png";
+  const profileImage = "https://i.ibb.co/nsQgPvZb/sekey1.jpg";
 </script>
 
 <div class="relative w-full h-64 md:h-[150px] bg-gray-100 overflow-hidden">
@@ -15,8 +16,8 @@
   />
 
   <!-- Content Overlay -->
-  <div class="absolute inset-0 bg-black/30 flex items-start justify-start p-5">
-    <div class="flex flex-col gap-2 sm:gap-3 md:gap-4 lg:gap-5">
+  <div class="absolute inset-0 bg-black/30 flex items-start justify-start p-1">
+    <div class="flex flex-col gap-0.5 sm:gap-3 md:gap-4 lg:gap-5">
       <!-- Profile Image -->
       <img 
         src={profileImage} 
@@ -28,13 +29,13 @@
 
       <!-- Name Section -->
       <div class="text-white">
-        <h1 class="text-3xl sm:text-4xl font-extrabold font-serif leading-tight">Elikem</h1>
-        <h2 class="text-2xl sm:text-3xl font-bold font-serif">Sek.</h2>
+        <h1 class="text-5xl sm:text-4xl font-extrabold font-serif leading-tight">Elikem</h1>
+        <h2 class="text-4xl sm:text-3xl font-bold font-serif">Sek.</h2>
         <div class="h-1 w-10 bg-amber-400 my-2"></div>
       </div>
 
       <!-- Socials Component -->
-      <Socials />
+       <Socials/>
     </div>
   </div>
 </div>
