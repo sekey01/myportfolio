@@ -7,233 +7,225 @@
 </script>
 
 <section class="hero-container">
-  <!-- Background Image -->
-  <img 
-    src={backgroundImage} 
-    alt="Background" 
-    class="hero-bg"
-  />
+  <!-- Background Image with Blend -->
+  <div class="image-wrapper">
+    <img 
+      src={backgroundImage} 
+      alt="Background" 
+      class="hero-bg"
+    />
+    <div class="image-blend"></div>
+  </div>
   
-  <!-- Content Overlay -->
-  <div class="content-overlay">
-    <div class="content-wrapper">
-      
-      <!-- Profile Section -->
-      <div class="profile-section">
-        <img 
-          src={profileImage} 
-          alt="Elikem Sek" 
-          class="profile-image"
-          width="60" 
-          height="60"
-          in:fade={{ delay: 200, duration: 800 }}
-        />
-      </div>
-      
-      <!-- Name Section -->
-      <div class="name-section">
-        <h1 
-          class="name-text"
-          in:fly={{ y: -20, duration: 600, delay: 300 }}
-        >
-          Elikem
-        </h1>
-        <h2 
-          class="name-text"
-          in:fly={{ y: -20, duration: 600, delay: 450 }}
-        >
-          Sek.
-        </h2>
-        <div 
-          class="underline"
-          in:fade={{ delay: 600 }}
-        ></div>
-      </div>
-      
-      <!-- Social Links Section -->
-      <div 
-        class="socials-section"
-        in:fade={{ delay: 800 }}
-      >
-        <Socials />
-      </div>
-      
+  <!-- Content -->
+  <div class="content">
+    
+    <!-- Profile -->
+    <div class="profile">
+      <img 
+        src={profileImage} 
+        alt="Elikem Sek" 
+        class="profile-img"
+        in:fade={{ delay: 300, duration: 1000 }}
+      />
     </div>
+    
+    <!-- Name -->
+    <div class="name">
+      <h1 
+        class="name-primary"
+        in:fly={{ y: 30, duration: 800, delay: 500 }}
+      >
+        Elikem
+      </h1>
+      <h2 
+        class="name-secondary"
+        in:fly={{ y: 30, duration: 800, delay: 700 }}
+      >
+        Sek.
+      </h2>
+      <div 
+        class="accent-line"
+        in:fade={{ delay: 900, duration: 600 }}
+      ></div>
+    </div>
+    
+    <!-- Socials -->
+    <div 
+      class="socials"
+      in:fade={{ delay: 1100, duration: 800 }}
+    >
+      <Socials />
+    </div>
+    
   </div>
 </section>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
   
-  /* Hero Container */
   .hero-container {
     position: relative;
     width: 100%;
-    height: 16rem; /* 64px * 4 = 256px */
-    background-color: #f3f4f6;
+    height: 16rem;
+    background: #000;
     overflow: hidden;
   }
   
   @media (min-width: 768px) {
     .hero-container {
-      height: 150px;
+      height: 20rem;
     }
   }
   
-  /* Background Image */
+  /* Image with Blend Effect */
+  .image-wrapper {
+    position: absolute;
+    inset: 0;
+  }
+  
   .hero-bg {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+    filter: brightness(0.7) contrast(1.1);
   }
   
-  /* Content Overlay */
-  .content-overlay {
+  .image-blend {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0.25rem;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 60%,
+      rgba(0, 0, 0, 0.3) 80%,
+      rgba(0, 0, 0, 0.8) 95%,
+      #000 100%
+    );
   }
   
-  /* Content Wrapper */
-  .content-wrapper {
+  /* Content Layout */
+  .content {
+    position: relative;
+    z-index: 10;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 0.125rem;
-    width: 100%;
-    max-width: 100%;
-  }
-  
-  @media (min-width: 640px) {
-    .content-wrapper {
-      gap: 0.75rem;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .content-wrapper {
-      gap: 1rem;
-    }
+    gap: 0.5rem;
+    padding: 1rem;
   }
   
   @media (min-width: 1024px) {
-    .content-wrapper {
-      gap: 1.25rem;
+    .content {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      padding: 0 1rem;
+      gap: 2rem;
+      padding: 2rem;
     }
   }
   
-  /* Profile Section */
-  .profile-section {
-    display: flex;
-    align-items: center;
-  }
-  
-  .profile-image {
+  /* Profile */
+  .profile-img {
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
     object-fit: cover;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    border: 2px solid #e5e7eb;
-    transition: all 0.3s ease;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+      0 0 20px rgba(255, 255, 255, 0.1),
+      0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
   }
   
-  .profile-image:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    transform: scale(1.05);
-  }
-  
-  @media (min-width: 640px) {
-    .profile-image {
-      width: 3.5rem;
-      height: 3.5rem;
-    }
+  .profile-img:hover {
+    box-shadow: 
+      0 0 30px rgba(255, 255, 255, 0.2),
+      0 12px 40px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
   }
   
   @media (min-width: 768px) {
-    .profile-image {
+    .profile-img {
       width: 4rem;
       height: 4rem;
     }
   }
   
   /* Name Section */
-  .name-section {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+  .name {
+    flex: 1;
+    color: #fff;
   }
   
   @media (min-width: 1024px) {
-    .name-section {
-      flex: 1;
+    .name {
       text-align: center;
     }
   }
   
-  .name-text {
-    font-size: 2.25rem;
+  .name-primary,
+  .name-secondary {
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
-    color: white;
-    line-height: 1.1;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: -0.025em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    line-height: 0.9;
     margin: 0;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .name-primary {
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .name-secondary {
+    font-size: 2.5rem;
+    color: #f3f4f6;
   }
   
   @media (min-width: 768px) {
-    .name-text {
-      font-size: 3.75rem;
+    .name-primary,
+    .name-secondary {
+      font-size: 3.5rem;
     }
   }
   
-  /* Underline */
-  .underline {
-    height: 0.25rem;
-    width: 2.5rem;
-    background-color: #f59e0b;
-    margin: 0.5rem 0;
-    transform-origin: left;
-    animation: scaleIn 0.8s ease-out forwards;
+  .accent-line {
+    width: 3rem;
+    height: 3px;
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    margin-top: 1rem;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+    animation: slideIn 0.6s ease-out forwards;
   }
   
   @media (min-width: 1024px) {
-    .underline {
-      margin: 0.5rem auto;
+    .accent-line {
+      margin: 1rem auto 0;
     }
   }
   
-  /* Socials Section */
-  .socials-section {
-    display: flex;
-    align-items: center;
-    min-width: fit-content;
+  /* Socials */
+  .socials {
+    align-self: flex-start;
   }
   
   @media (min-width: 1024px) {
-    .socials-section {
-      justify-content: flex-end;
-      flex-shrink: 0;
+    .socials {
+      align-self: center;
     }
   }
   
-  /* Animations */
-  @keyframes scaleIn {
+  @keyframes slideIn {
     from { 
-      transform: scaleX(0); 
+      width: 0;
+      opacity: 0;
     }
     to { 
-      transform: scaleX(1); 
+      width: 3rem;
+      opacity: 1;
     }
   }
 </style>

@@ -18,7 +18,20 @@
         return () => observer.disconnect();
     });
 
-    let projects = [
+    type ProjectColor = 'yellow' | 'blue' | 'green' | 'purple' | 'cyan' | 'orange';
+
+    interface Project {
+        title: string;
+        category: string;
+        description: string;
+        tags: string[];
+        status: string;
+        impact: string;
+        icon: string;
+        color: ProjectColor;
+    }
+
+    let projects: Project[] = [
         {
             title: "MealMate Delivery Platform",
             category: "Mobile App Development",
