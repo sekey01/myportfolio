@@ -10,7 +10,7 @@
 		</p>
 		<div class="flex items-center gap-2 sm:gap-4">
 			<img 
-				src="https://media-hosting.imagekit.io/2c4db4f389f141d4/download.jpeg?Expires=1841859541&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=2-7MHQ4nFXlpsEl9b3JFSsGQftkRCID53VfRCEqLhHieO41mm0gLI8BzjJuBOBlhgVpufaB0CVZYlNmwxaJZp97~JobVNkD66PGVPSCWgDeBgePAnoU6cgIeYi9lsbqauqkgTcgZqpg6BLwPI2MAMVKT8kLDG7pWRV-rS9woS~cRr4QJgziWdZ1Lf7IO19SCR1VsQNowV~2hRe5i1bs5KYWdItIJlHqUY3o2-bIm0B4vIbtzZBe3noBlNgJYXdI9zsZJ6MMGS8g82yzAoYhgZnF1llrSWYjoKHQ8qneH~VCJpcY-MkEh8hT8g-x5ZJ16HkzxWT1Ep-S~3JPBN99-dg__" 
+				src="https://i.ibb.co/nsQgPvZb/sekey1.jpg" 
 				alt="Elikem Sek" 
 				class="rounded-full w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-cover shadow-lg border-2 border-yellow-400 hover:shadow-yellow-300 transition-all duration-300 hover:scale-105"
 				width="60"
@@ -66,6 +66,65 @@
 			Feel free to explore my portfolio and reach out if you have any questions or opportunities.
 		</p>
 	</div>
+</div>
+
+
+
+
+<!-- Background Image and Overlay -->
+<div 
+  class="relative h-screen w-full bg-gray-900 overflow-hidden"
+  style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://www.braintechnosys.com/blog/wp-content/uploads/2020/08/mobile-app-developmen.jpeg') no-repeat center center; background-size: cover;"
+>
+  <!-- Content Container -->
+  <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
+    <!-- Badge/Tag -->
+    <span class="bg-yellow-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
+      Mobile Developer
+    </span>
+    
+    <!-- Main Headline -->
+    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
+      Building <span class="text-yellow-400">Exceptional</span><br/>
+      Mobile Experiences
+    </h1>
+    
+    <!-- Subheadline -->
+    <p class="text-lg md:text-xl text-gray-300 max-w-2xl mb-8">
+      I craft high-performance iOS & Android apps with cutting-edge technologies 
+      and pixel-perfect UI implementations.
+    </p>
+    
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4">
+      <button class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+        View My Work
+      </button>
+      <button class="border-2 border-white hover:border-yellow-400 text-white hover:text-yellow-400 font-bold py-3 px-6 rounded-full transition-all duration-300">
+        Contact Me
+      </button>
+    </div>
+    
+    <!-- Tech Stack Icons -->
+    <div class="mt-12 flex flex-wrap justify-center gap-6">
+      {#each ['swift', 'kotlin', 'flutter', 'react-native'] as tech}
+        <div class="bg-gray-800 bg-opacity-60 p-3 rounded-full hover:bg-yellow-400 hover:bg-opacity-20 transition-all duration-300">
+          <img 
+            src={`/icons/${tech}.svg`} 
+            alt={tech} 
+            class="h-8 w-8 object-contain filter brightness-0 invert"
+          />
+        </div>
+      {/each}
+    </div>
+  </div>
+  
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </div>
 </div>
 
 <style>

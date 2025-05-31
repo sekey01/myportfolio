@@ -29,8 +29,8 @@
 
       <!-- Name Section -->
       <div class="text-white">
-        <h1 class="text-5xl sm:text-4xl font-extrabold font-serif leading-tight">Elikem</h1>
-        <h2 class="text-4xl sm:text-3xl font-bold font-serif">Sek.</h2>
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">Elikem</h1>
+        <h2 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">Sek.</h2>
         <div class="h-1 w-10 bg-amber-400 my-2"></div>
       </div>
 

@@ -4,11 +4,13 @@
 	import Experiences from './experiences.svelte';
 	import Footer from './footer.svelte';
 	import InitRow from "./init_row.svelte";
+	import Navbar from './navbar.svelte';
 	import Projects from './projects.svelte';
 	import Socials from './socials.svelte';
 </script>
 
 <div class="main-page">
+<Navbar/>
 <InitRow/>
 <CenterIntro/>
 <Experiences/>
