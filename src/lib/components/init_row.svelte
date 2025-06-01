@@ -2,8 +2,8 @@
   import Socials from "./socials.svelte";
   import { fade, fly } from 'svelte/transition';
   
-  const backgroundImage = "https://i.ibb.co/Mkn5nRxn/eli.png";
-  const profileImage = "https://i.ibb.co/nsQgPvZb/sekey1.jpg";
+  const profileImage = "https://i.ibb.co/Mkn5nRxn/eli.png";
+  const  backgroundImage = "https://i.ibb.co/nsQgPvZb/sekey1.jpg";
 </script>
 
 <section class="hero-container">
@@ -26,7 +26,7 @@
         src={profileImage} 
         alt="Elikem Sek" 
         class="profile-img"
-        in:fade={{ delay: 300, duration: 1000 }}
+        in:fade={{ delay: 500, duration: 3000 }}
       />
     </div>
     

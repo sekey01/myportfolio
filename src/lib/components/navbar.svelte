@@ -1,5 +1,4 @@
 <script lang="ts">
-  export let title: string = "Prince Sekey";
   import { fade, slide } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
   
@@ -26,12 +25,33 @@
 <nav class="navbar">
   <div class="nav-container">
     
-    <!-- Brand/Logo Section -->
-    <div class="brand-section">
-      <div class="brand-text" in:fade={{ duration: 800, delay: 200 }}>
-        {title}
+    <!-- Logo Section -->
+    <div class="logo-section" in:fade={{ duration: 800, delay: 300 }}>
+      <div class="logo-container">
+        <div class="logo-icon">
+          <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+            <!-- Geometric logo design -->
+            <rect x="2" y="2" width="36" height="36" rx="8" fill="url(#grad1)" stroke="url(#grad2)" stroke-width="1"/>
+            <path d="M12 16L20 12L28 16V28L20 32L12 28V16Z" fill="rgba(255,255,255,0.1)"/>
+            <circle cx="20" cy="20" r="6" fill="rgba(255,255,255,0.2)"/>
+            <path d="M16 20L19 23L24 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#3b82f6"/>
+                <stop offset="100%" style="stop-color:#1e40af"/>
+              </linearGradient>
+              <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#60a5fa"/>
+                <stop offset="100%" style="stop-color:#3b82f6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-primary">Elikem</span>
+          <span class="logo-secondary">Dev</span>
+        </div>
       </div>
-      <div class="brand-accent"></div>
     </div>
     
     <!-- Desktop Navigation -->
@@ -42,12 +62,22 @@
           class="nav-link"
           class:active={activeLink === item.id}
           on:click={() => setActive(item.id)}
-          in:fade={{ duration: 600, delay: 300 + (index * 100) }}
+          in:fade={{ duration: 600, delay: 500 + (index * 100) }}
         >
           <span class="nav-text">{item.label}</span>
-          <div class="nav-indicator"></div>
+          <div class="nav-glow"></div>
         </a>
       {/each}
+    </div>
+    
+    <!-- CTA Button -->
+    <div class="cta-section" in:fade={{ duration: 600, delay: 900 }}>
+      <a href="#contact" class="cta-btn" on:click={() => setActive('contact')}>
+        <span>Let's Work</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
+        </svg>
+      </a>
     </div>
     
     <!-- Mobile Menu Button -->
@@ -57,7 +87,7 @@
       aria-label="Toggle navigation menu"
       aria-expanded={mobileMenuOpen}
     >
-      <div class="hamburger" class:open={mobileMenuOpen}>
+      <div class="menu-icon" class:open={mobileMenuOpen}>
         <span></span>
         <span></span>
         <span></span>
@@ -72,84 +102,116 @@
       class="mobile-nav"
       transition:slide={{ duration: 400, easing: quintOut }}
     >
-      {#each navItems as item, index}
-        <a
-          href={item.href}
-          class="mobile-nav-link"
-          class:active={activeLink === item.id}
-          on:click={() => setActive(item.id)}
-          in:fade={{ duration: 300, delay: index * 50 }}
-        >
-          <span class="mobile-nav-text">{item.label}</span>
-          <div class="mobile-nav-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6l6 6-6 6-1.41-1.41z"/>
-            </svg>
-          </div>
-        </a>
-      {/each}
+      <div class="mobile-nav-content">
+        {#each navItems as item, index}
+          <a
+            href={item.href}
+            class="mobile-nav-link"
+            class:active={activeLink === item.id}
+            on:click={() => setActive(item.id)}
+            in:fade={{ duration: 300, delay: index * 80 }}
+          >
+            <span class="mobile-nav-text">{item.label}</span>
+            <div class="mobile-nav-arrow">→</div>
+          </a>
+        {/each}
+        
+        <div class="mobile-cta" in:fade={{ duration: 300, delay: 320 }}>
+          <a href="#contact" class="mobile-cta-btn" on:click={() => setActive('contact')}>
+            Start a Project
+          </a>
+        </div>
+      </div>
     </div>
   {/if}
 </nav>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
   
-  /* Main Navbar Container */
+  /* Main Navbar */
   .navbar {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(24px) saturate(180%);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.08);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    box-shadow: 
+      0 1px 3px rgba(0, 0, 0, 0.12),
+      0 1px 2px rgba(0, 0, 0, 0.24),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
   }
   
   .nav-container {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 2rem;
   }
   
-  /* Brand Section */
-  .brand-section {
-    position: relative;
+  /* Logo Section */
+  .logo-section {
+    flex-shrink: 0;
+  }
+  
+  .logo-container {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
   
-  .brand-text {
+  .logo-container:hover {
+    transform: translateY(-1px);
+  }
+  
+  .logo-icon {
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .logo-container:hover .logo-icon {
+    transform: rotate(5deg) scale(1.05);
+    filter: drop-shadow(0 8px 16px rgba(59, 130, 246, 0.3));
+  }
+  
+  .logo-text {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
     font-family: 'Inter', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, #f59e0b, #d97706);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    font-size: 1.25rem;
     letter-spacing: -0.025em;
   }
   
-  .brand-accent {
-    width: 4px;
-    height: 24px;
-    background: linear-gradient(135deg, #f59e0b, #d97706);
-    border-radius: 2px;
-    animation: pulse 2s ease-in-out infinite;
+  .logo-primary {
+    color: #f8fafc;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .logo-secondary {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   
   /* Desktop Navigation */
   .desktop-nav {
     display: none;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.25rem;
+    flex: 1;
+    justify-content: center;
   }
   
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .desktop-nav {
       display: flex;
     }
@@ -159,27 +221,46 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding: 0.75rem 1.25rem;
-    border-radius: 12px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 16px;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    font-size: 0.875rem;
-    color: #94a3b8;
+    font-size: 0.9rem;
+    color: #cbd5e1;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
+    border: 1px solid transparent;
+  }
+  
+  .nav-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(29, 78, 216, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 16px;
+  }
+  
+  .nav-link:hover::before {
+    opacity: 1;
   }
   
   .nav-link:hover {
     color: #f1f5f9;
-    background: rgba(148, 163, 184, 0.1);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    border-color: rgba(59, 130, 246, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   }
   
   .nav-link.active {
-    color: #1e293b;
-    background: linear-gradient(135deg, #f59e0b, #d97706);
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+    color: #ffffff;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border-color: #3b82f6;
+    box-shadow: 
+      0 4px 14px rgba(59, 130, 246, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
   }
   
   .nav-text {
@@ -187,24 +268,62 @@
     z-index: 2;
   }
   
-  .nav-indicator {
+  .nav-glow {
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #f59e0b, #d97706);
-    border-radius: 1px;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.3), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 16px;
   }
   
-  .nav-link:hover .nav-indicator {
-    width: 80%;
+  .nav-link.active .nav-glow {
+    opacity: 1;
   }
   
-  .nav-link.active .nav-indicator {
-    width: 0;
+  /* CTA Section */
+  .cta-section {
+    display: none;
+    flex-shrink: 0;
+  }
+  
+  @media (min-width: 1024px) {
+    .cta-section {
+      display: block;
+    }
+  }
+  
+  .cta-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #000;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 
+      0 4px 14px rgba(245, 158, 11, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  
+  .cta-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+      0 8px 25px rgba(245, 158, 11, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+  
+  .cta-btn svg {
+    transition: transform 0.3s ease;
+  }
+  
+  .cta-btn:hover svg {
+    transform: translateX(2px);
   }
   
   /* Mobile Menu Button */
@@ -220,18 +339,17 @@
     transition: all 0.3s ease;
   }
   
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .mobile-menu-btn {
       display: none;
     }
   }
   
   .mobile-menu-btn:hover {
-    background: rgba(148, 163, 184, 0.1);
+    background: rgba(59, 130, 246, 0.1);
   }
   
-  /* Hamburger Animation */
-  .hamburger {
+  .menu-icon {
     width: 24px;
     height: 18px;
     position: relative;
@@ -240,122 +358,128 @@
     justify-content: space-between;
   }
   
-  .hamburger span {
+  .menu-icon span {
     display: block;
     height: 2px;
     width: 100%;
-    background: #94a3b8;
+    background: #cbd5e1;
     border-radius: 1px;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
   
-  .hamburger.open span:nth-child(1) {
+  .menu-icon.open span:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
-    background: #f59e0b;
+    background: #3b82f6;
   }
   
-  .hamburger.open span:nth-child(2) {
+  .menu-icon.open span:nth-child(2) {
     opacity: 0;
     transform: translateX(20px);
   }
   
-  .hamburger.open span:nth-child(3) {
+  .menu-icon.open span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
-    background: #f59e0b;
+    background: #3b82f6;
   }
   
   /* Mobile Navigation */
   .mobile-nav {
-    display: block;
-    padding: 1rem;
-    background: rgba(30, 41, 59, 0.95);
-    backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(148, 163, 184, 0.1);
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(59, 130, 246, 0.1);
   }
   
-  @media (min-width: 768px) {
-    .mobile-nav {
-      display: none;
-    }
+  .mobile-nav-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
   }
   
   .mobile-nav-link {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
-    margin: 0.25rem 0;
-    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin: 0.5rem 0;
+    border-radius: 16px;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    color: #94a3b8;
+    font-size: 1.1rem;
+    color: #cbd5e1;
     transition: all 0.3s ease;
     border: 1px solid transparent;
   }
   
   .mobile-nav-link:hover {
     color: #f1f5f9;
-    background: rgba(148, 163, 184, 0.1);
-    border-color: rgba(148, 163, 184, 0.2);
-    transform: translateX(4px);
+    background: rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.2);
+    transform: translateX(8px);
   }
   
   .mobile-nav-link.active {
-    color: #1e293b;
-    background: linear-gradient(135deg, #f59e0b, #d97706);
-    border-color: #f59e0b;
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+    color: #ffffff;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border-color: #3b82f6;
   }
   
-  .mobile-nav-text {
-    font-size: 1rem;
-  }
-  
-  .mobile-nav-icon {
+  .mobile-nav-arrow {
+    font-size: 1.2rem;
     transition: transform 0.3s ease;
   }
   
-  .mobile-nav-link:hover .mobile-nav-icon {
+  .mobile-nav-link:hover .mobile-nav-arrow {
     transform: translateX(4px);
   }
   
-  .mobile-nav-link.active .mobile-nav-icon {
-    color: #1e293b;
+  .mobile-cta {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(59, 130, 246, 0.1);
   }
   
-  /* Animations */
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 1;
-      transform: scaleY(1);
-    }
-    50% {
-      opacity: 0.7;
-      transform: scaleY(0.8);
-    }
+  .mobile-cta-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #000;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
   }
   
-  /* Smooth scrolling for anchor links */
+  .mobile-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5);
+  }
+  
+  /* Smooth scrolling */
   :global(html) {
     scroll-behavior: smooth;
   }
   
-  /* Custom scrollbar for webkit browsers */
+  /* Enhanced scrollbar */
   :global(::-webkit-scrollbar) {
-    width: 8px;
+    width: 6px;
   }
   
   :global(::-webkit-scrollbar-track) {
-    background: #1e293b;
+    background: #0f172a;
   }
   
   :global(::-webkit-scrollbar-thumb) {
-    background: linear-gradient(135deg, #f59e0b, #d97706);
-    border-radius: 4px;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    border-radius: 3px;
   }
   
   :global(::-webkit-scrollbar-thumb:hover) {
-    background: linear-gradient(135deg, #d97706, #b45309);
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
   }
 </style>
