@@ -96,80 +96,60 @@
 
     const colorSchemes = {
         yellow: {
-            bg: "from-yellow-400/10 to-yellow-600/10",
-            border: "border-yellow-400/30 hover:border-yellow-400/60",
-            glow: "hover:shadow-yellow-400/20",
-            text: "text-yellow-400",
-            badge: "bg-yellow-400"
+            bg: "from-yellow-50 to-yellow-100",
+            border: "border-yellow-200 hover:border-yellow-300",
+            glow: "hover:shadow-yellow-200",
+            text: "text-yellow-600",
+            badge: "bg-yellow-100 text-yellow-800"
         },
         blue: {
-            bg: "from-blue-400/10 to-blue-600/10",
-            border: "border-blue-400/30 hover:border-blue-400/60",
-            glow: "hover:shadow-blue-400/20",
-            text: "text-blue-400",
-            badge: "bg-blue-400"
+            bg: "from-blue-50 to-blue-100",
+            border: "border-blue-200 hover:border-blue-300",
+            glow: "hover:shadow-blue-200",
+            text: "text-blue-600",
+            badge: "bg-blue-100 text-blue-800"
         },
         green: {
-            bg: "from-green-400/10 to-green-600/10",
-            border: "border-green-400/30 hover:border-green-400/60",
-            glow: "hover:shadow-green-400/20",
-            text: "text-green-400",
-            badge: "bg-green-400"
+            bg: "from-green-50 to-green-100",
+            border: "border-green-200 hover:border-green-300",
+            glow: "hover:shadow-green-200",
+            text: "text-green-600",
+            badge: "bg-green-100 text-green-800"
         },
         purple: {
-            bg: "from-purple-400/10 to-purple-600/10",
-            border: "border-purple-400/30 hover:border-purple-400/60",
-            glow: "hover:shadow-purple-400/20",
-            text: "text-purple-400",
-            badge: "bg-purple-400"
+            bg: "from-purple-50 to-purple-100",
+            border: "border-purple-200 hover:border-purple-300",
+            glow: "hover:shadow-purple-200",
+            text: "text-purple-600",
+            badge: "bg-purple-100 text-purple-800"
         },
         cyan: {
-            bg: "from-cyan-400/10 to-cyan-600/10",
-            border: "border-cyan-400/30 hover:border-cyan-400/60",
-            glow: "hover:shadow-cyan-400/20",
-            text: "text-cyan-400",
-            badge: "bg-cyan-400"
+            bg: "from-cyan-50 to-cyan-100",
+            border: "border-cyan-200 hover:border-cyan-300",
+            glow: "hover:shadow-cyan-200",
+            text: "text-cyan-600",
+            badge: "bg-cyan-100 text-cyan-800"
         },
         orange: {
-            bg: "from-orange-400/10 to-orange-600/10",
-            border: "border-orange-400/30 hover:border-orange-400/60",
-            glow: "hover:shadow-orange-400/20",
-            text: "text-orange-400",
-            badge: "bg-orange-400"
+            bg: "from-orange-50 to-orange-100",
+            border: "border-orange-200 hover:border-orange-300",
+            glow: "hover:shadow-orange-200",
+            text: "text-orange-600",
+            badge: "bg-orange-100 text-orange-800"
         }
     };
 </script>
 
-<div class="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white py-16 px-4 sm:px-6 lg:px-8 projects-section">
-    <!-- Header Section -->
-    <div class="text-center mb-20 max-w-5xl mx-auto {isVisible ? 'animate-fade-in-up' : 'opacity-0'}">
-        <div class="inline-block mb-6">
-            <span class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-4 py-2 rounded-full text-sm font-black uppercase tracking-wider">
-                Portfolio Showcase
-            </span>
-        </div>
-        
-        <h2 class="text-5xl sm:text-6xl md:text-7xl font-black bg-gradient-to-r from-white via-yellow-400 to-yellow-500 bg-clip-text text-transparent mb-6 animate-gradient-text">
-            Game-Changing Projects
+<div class="projects-section py-20">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-black mb-4 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+            Featured Projects
         </h2>
-        
-        <p class="text-xl sm:text-2xl text-gray-300 font-bold max-w-4xl mx-auto leading-relaxed mb-8">
-            💡 <span class="text-yellow-400">Turning Complex Challenges into Profitable Solutions</span> - Each project represents a success story
+        <p class="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
+            A showcase of my most impactful work, demonstrating expertise across various technologies and industries
         </p>
-        
-        <div class="flex flex-wrap justify-center gap-6 max-w-3xl mx-auto">
-            <div class="bg-gradient-to-r from-yellow-400/20 to-yellow-600/20 backdrop-blur-sm border border-yellow-400/30 rounded-xl px-4 py-2">
-                <span class="text-yellow-400 font-bold">🎯 100% Client Satisfaction</span>
-            </div>
-            <div class="bg-gradient-to-r from-blue-400/20 to-blue-600/20 backdrop-blur-sm border border-blue-400/30 rounded-xl px-4 py-2">
-                <span class="text-blue-400 font-bold">⚡ 20+ Technologies Mastered</span>
-            </div>
-            <div class="bg-gradient-to-r from-green-400/20 to-green-600/20 backdrop-blur-sm border border-green-400/30 rounded-xl px-4 py-2">
-                <span class="text-green-400 font-bold">📈 Proven ROI Results</span>
-            </div>
-        </div>
-        
-        <div class="w-32 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mt-8 rounded-full animate-pulse"></div>
+        <div class="w-32 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto mt-8 rounded-full animate-pulse"></div>
     </div>
 
     <!-- Projects Grid -->
@@ -184,10 +164,10 @@
                         {project.icon}
                     </div>
                     <div class="flex flex-col items-end gap-2">
-                        <span class="{colorSchemes[project.color].badge} text-black px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider">
+                        <span class="{colorSchemes[project.color].badge} px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider">
                             {project.status}
                         </span>
-                        <span class="bg-gray-800 {colorSchemes[project.color].text} px-3 py-1 rounded-full text-xs font-bold">
+                        <span class="bg-white {colorSchemes[project.color].text} px-3 py-1 rounded-full text-xs font-bold">
                             {project.impact}
                         </span>
                     </div>
@@ -195,7 +175,7 @@
 
                 <!-- Project Title & Category -->
                 <div class="mb-4">
-                    <h3 class="text-xl md:text-2xl font-black text-white mb-2 group-hover:{colorSchemes[project.color].text} transition-colors duration-300">
+                    <h3 class="text-xl md:text-2xl font-black text-gray-800 mb-2 group-hover:{colorSchemes[project.color].text} transition-colors duration-300">
                         {project.title}
                     </h3>
                     <p class="{colorSchemes[project.color].text} font-bold text-sm uppercase tracking-wider">
@@ -204,14 +184,14 @@
                 </div>
 
                 <!-- Project Description -->
-                <p class="text-gray-300 font-semibold leading-relaxed mb-6 text-sm">
+                <p class="text-gray-600 font-semibold leading-relaxed mb-6 text-sm">
                     {project.description}
                 </p>
 
                 <!-- Tech Stack Tags -->
                 <div class="flex flex-wrap gap-2 mb-6">
                     {#each project.tags as tag}
-                        <span class="bg-gray-800/60 text-gray-300 px-3 py-1 rounded-full text-xs font-bold border border-gray-700 hover:border-gray-500 transition-colors">
+                        <span class="bg-white text-gray-600 px-3 py-1 rounded-full text-xs font-bold border border-gray-200 hover:border-gray-300 transition-colors">
                             {tag}
                         </span>
                     {/each}
@@ -219,10 +199,10 @@
 
                 <!-- Project Actions -->
                 <div class="flex gap-3">
-                    <button class="{colorSchemes[project.color].badge} text-black px-4 py-2 rounded-full text-sm font-black hover:scale-105 transition-all duration-300 flex-1">
+                    <button class="{colorSchemes[project.color].badge} px-4 py-2 rounded-full text-sm font-black hover:scale-105 transition-all duration-300 flex-1">
                         View Details
                     </button>
-                    <button class="bg-gray-800 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-gray-700 transition-colors border border-gray-600">
+                    <button class="bg-white text-gray-800 px-4 py-2 rounded-full text-sm font-bold hover:bg-gray-50 transition-colors border border-gray-200">
                         Demo
                     </button>
                 </div>
@@ -232,40 +212,25 @@
 
     <!-- Professional CTA Section -->
     <div class="text-center {isVisible ? 'animate-fade-in-up' : 'opacity-0'}" style="animation-delay: 0.8s;">
-        <div class="bg-gradient-to-r from-yellow-400/10 via-purple-400/10 to-blue-400/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 md:p-12 max-w-5xl mx-auto relative overflow-hidden">
+        <div class="bg-gradient-to-r from-blue-50 via-purple-50 to-blue-50 backdrop-blur-sm border border-gray-200 rounded-3xl p-8 md:p-12 max-w-5xl mx-auto relative overflow-hidden">
             <!-- Background Glow Effect -->
-            <div class="absolute inset-0 bg-gradient-to-r from-yellow-400/5 via-purple-400/5 to-blue-400/5 animate-pulse"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-100/50 via-purple-100/50 to-blue-100/50 animate-pulse"></div>
             
             <div class="relative z-10">
-                <h3 class="text-3xl md:text-4xl font-black text-white mb-4">
+                <h3 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">
                     🚀 Ready to Scale Your Business?
                 </h3>
-                <p class="text-gray-300 font-bold text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-gray-600 font-bold text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
                     Let's transform your ideas into market-dominating applications that drive growth, engage users, and maximize ROI
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-black px-8 py-4 rounded-full text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-yellow-400/50">
+                    <button class="bg-gradient-to-r from-blue-600 to-blue-400 text-white font-black px-8 py-4 rounded-full text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-400/50">
                         Start Your Project Today →
                     </button>
-                    <button class="border-2 border-white text-white font-black px-8 py-4 rounded-full text-lg hover:bg-white hover:text-black transition-all duration-300">
+                    <button class="border-2 border-gray-800 text-gray-800 font-black px-8 py-4 rounded-full text-lg hover:bg-gray-800 hover:text-white transition-all duration-300">
                         Schedule Consultation
                     </button>
-                </div>
-                
-                <div class="mt-8 flex flex-wrap justify-center gap-8 text-sm font-bold text-gray-400">
-                    <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                        Available for New Projects
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
-                        24/7 Support Included
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
-                        Money-Back Guarantee
-                    </div>
                 </div>
             </div>
         </div>
@@ -309,7 +274,7 @@
     /* Custom scrollbar */
     .projects-container {
         scrollbar-width: thin;
-        scrollbar-color: #facc15 transparent;
+        scrollbar-color: #3b82f6 transparent;
     }
 
     .projects-container::-webkit-scrollbar {
@@ -317,13 +282,13 @@
     }
 
     .projects-container::-webkit-scrollbar-thumb {
-        background-color: #facc15;
+        background-color: #3b82f6;
         border-radius: 3px;
     }
 
     /* Enhanced glow effects */
     .group:hover {
-        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
+        filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.05));
     }
 
     /* Mobile responsive adjustments */

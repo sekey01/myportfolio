@@ -23,7 +23,7 @@
 		padding: 0;
 		margin: 0 auto;
 		min-height: 100vh;
-		background-color: #000000;
+		background-color: #ffffff;
 		overflow-x: hidden;
 		/* Professional container spacing */
 		max-width: 100%;
@@ -51,26 +51,25 @@
 	:global(html) {
 		scroll-behavior: smooth;
 		scrollbar-width: thin;
-		scrollbar-color: #facc15 #1a1a1a;
+		scrollbar-color: #3b82f6 #f3f4f6;
 	}
 
 	:global(::-webkit-scrollbar) {
-		width: 8px;
+		width: 6px;
 	}
 
 	:global(::-webkit-scrollbar-track) {
-		background: #1a1a1a;
+		background: #f3f4f6;
 		border-radius: 4px;
 	}
 
 	:global(::-webkit-scrollbar-thumb) {
-		background: linear-gradient(180deg, #facc15, #eab308);
+		background: #3b82f6;
 		border-radius: 4px;
-		border: 1px solid #1a1a1a;
 	}
 
 	:global(::-webkit-scrollbar-thumb:hover) {
-		background: linear-gradient(180deg, #eab308, #d97706);
+		background: #2563eb;
 	}
 
 	/* Professional responsive breakpoints */
