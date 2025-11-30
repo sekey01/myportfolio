@@ -4,7 +4,7 @@
 
 </script>
 
-<div>
+<div class=" min-h-screen bg-black  w-full p-4 lg:p-10" >
     <MainMargin/>
 
 </div>

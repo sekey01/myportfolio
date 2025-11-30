@@ -1,0 +1,44 @@
+<script>
+
+</script>
+
+<div class=" flex items-center justify-center flex-col gap-6">
+
+  <!-- Row of Buttons and Logo -->
+<div class=" flex flex-row  justify-between items-center place-items-stretch w-full gap-4">
+
+  <img class="h-10 w-10 rounded-full bg-white" src="/src/lib/assets/images/phi.png" alt="Phi">
+
+  <!-- About & Social Media -->
+   <div class="flex flex-row text-gray-400 gap-6 text-sm lg:text-2xl">
+    <p>About</p>
+    <p>Contact</p>
+   </div>
+
+
+   <!-- Get In Touch -->
+
+   <div class="text-white p-2 border border-gray-500 bg-gray-800 rounded-full text-xs lg:text-2xl">
+    Get in touch
+   </div>
+
+</div>
+
+   <!-- Prince Sekey Entrepreneur -->
+  <div class=" h-full sm:h-20 w-[90%] lg:w-[40%] bg-gray-900  border-2 border-gray-800 flex flex-row items-center place-content-start rounded-full p-1 gap-6 sm:gap-1 ">
+  <div class="flex justify-center ">
+   <h1 class="h-16 w-16 bg-white rounded-full justify-center flex items-center">
+    <div class="h-14 w-14 bg-black rounded-full flex justify-center items-center">
+      <div class="flex h-2 w-2 bg-white rounded-full justify-center items-center">
+
+      </div>
+    </div>
+   </h1>
+</div>
+
+<h1 class="text-white justify-center place-item-center font-thin text-sm lg:text-2xl">
+   Prince Sekey, Entrepreneur-Tech
+</h1>
+
+</div>
+</div>
