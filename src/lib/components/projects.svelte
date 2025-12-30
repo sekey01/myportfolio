@@ -1,22 +1,26 @@
 <script lang="ts">
 	import ProjectsContainer from "./projects_container.svelte";
 	import Scrollcard from "./scrollcard.svelte";
+  import youthImage from '/src/lib/assets/images/post1.jpeg';
+  import techImage from '/src/lib/assets/images/post2.jpeg';
+  import greenImage from '/src/lib/assets/images/post3.jpeg';
+
 
       let programs = [
         {
           title: "Youth Enlightenment",
           description: "Community engagement and development programs for youth.",
-          imageUrl: "/src/lib/assets/images/post1.jpeg"
+          imageUrl: youthImage
         },
         {
           title: "Tech for All",
           description: "Bridging the digital divide through technology access.",
-          imageUrl: "/src/lib/assets/images/post2.jpeg"
+          imageUrl: techImage
         },
         {
           title: "Green Future",
           description: "Environmental sustainability initiatives and education.",
-          imageUrl: "/src/lib/assets/images/post3.jpeg"
+          imageUrl: greenImage
         }
       ];
 </script>
