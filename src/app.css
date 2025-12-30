@@ -1,3 +1,39 @@
 @import 'tailwindcss';
-@plugin '@tailwindcss/typography';
-@tailwind utilities;
+
+/* Font Face Declarations */
+@font-face {
+  font-family: "bbhbartle";
+  src: url("./lib/assets/fonts/BBHBartle-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geom";
+  src: url("./lib/assets/fonts/Geom-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "bpv";
+  src: url("./lib/assets/fonts/BitcountPropDoubleInk-VariableFont_CRSV\,ELSH\,ELXP\,SZP1\,SZP2\,XPN1\,XPN2\,YPN1\,YPN2\,slnt\,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* Base styles - Use direct CSS, not @apply */
+@layer base {
+  html, 
+  body {
+    font-family: "Geom", sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "bbhbartle", sans-serif;
+  }
+
+  span {
+    font-family: "bpv", sans-serif;
+  }
+}

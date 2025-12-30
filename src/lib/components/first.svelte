@@ -5,20 +5,20 @@
 <div class=" flex items-center justify-center flex-col gap-6">
 
   <!-- Row of Buttons and Logo -->
-<div class=" flex flex-row  justify-between items-center place-items-stretch w-full gap-4">
+  <div class=" flex flex-row  justify-between items-center place-items-stretch w-full gap-4">
 
   <!-- <img class="h-10 w-10 rounded-full bg-white" src="/src/lib/assets/images/sekey.png" alt="Phi"> -->
- <p class="justify-center items-center h-12 w-12 text-white border-2 border-white p-2 rounded-full ">SP</p>
+ <!-- <p class="justify-center items-center h-12 w-12 text-white border-2 border-white p-2 rounded-full ">SP</p> -->
   <!-- About & Social Media -->
-   <div class="flex flex-row text-gray-400 gap-6 text-sm lg:text-2xl">
-    <p>About</p>
-    <p>Contact</p>
+   <div class="flex flex-row text-gray-400 gap-0 text-sm lg:text-2xl ">
+    <p class="font-bold` text-white ">sekeyprince.</p>
+    <p class="font-thin text-green-500 ">com</p>
    </div>
 
 
-   <!-- Get In Touch -->
+   <!-- Button for Home -->
 
-   <div class="text-white p-2 border border-gray-500 bg-gray-800 rounded-full text-xs lg:text-2xl">
+   <div class="font-lora text-white font-bold p-2 border border-green-500 bg-gray-800 rounded-full text-xs lg:text-2xl">
     Get in touch
    </div>
 
@@ -37,9 +37,9 @@
    </h1>
 </div>
 
-<h1 class="text-white justify-center place-item-center font-thin text-sm lg:text-2xl">
-   Prince Sekey, Web/Mobile Developer
-</h1>
+<p class=" text-white justify-center place-item-center text-sm lg:text-2xl">
+   Prince Sekey, Public Speaker
+</p>
 
 </div>
 </div>

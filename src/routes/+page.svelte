@@ -1,5 +1,5 @@
 <script>
-
+ import "../app.css";
 	import MainMargin from "$lib/components/main_margin.svelte";
 
 </script>
