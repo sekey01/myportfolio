@@ -1,5 +1,5 @@
 <script>
-
+import phiLogo from '/src/lib/assets/images/phi.png';
 </script>
 
 <div class=" flex items-center justify-center flex-col gap-6">
@@ -29,7 +29,7 @@
   <div class="flex justify-center ">
    <h1 class="h-16 w-16 bg-gray-400 rounded-full justify-center flex items-center">
     <div class=" animate-spin h-14 w-14 bg-white rounded-full flex justify-center items-center">
-      <img src="/src/lib/assets/images/phi.png" alt="Phi">
+      <img src={phiLogo} alt="Phi">
       <div class="flex h-2 w-2 bg-black rounded-full justify-center items-center">
 
       </div>
