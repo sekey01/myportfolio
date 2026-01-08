@@ -1,14 +1,21 @@
 <script lang="ts">
 	import Terminal from './terminal.svelte';
-	import About from "./about.svelte";
 	import First from "./first.svelte";
 	import Projects from "./projects.svelte";
 	import Second from "./second.svelte";
 
 	let showTerminal = false;
+
+	function scrollToTop() {
+		document.getElementById("top")?.scrollIntoView({ behavior: "smooth" });
+	}
+
+	function scrollToAbout() {
+		document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+	}
 </script>
 
-<div class="relative">
+<div class="relative" id="top">
 
   <!-- Background Designs (kept as-is, commented) -->
   <!--
@@ -22,9 +29,13 @@
 
   <div class="flex flex-col gap-2 lg:gap-12">
     <First/>	
-    <Second/>
+
+    <!-- About Section -->
+    <div id="about">
+      <Second/>
+    </div>
+
     <Projects/>
-    <About/>
   
     <!-- Floating Navigation -->
     <div 
@@ -36,14 +47,20 @@
       <div class="grid grid-cols-3 w-full gap-2 justify-items-center items-center">
 
         <!-- SP -->
-        <div class="h-12 lg:w-[30%] bg-black flex justify-center border-2 p-2 border-white rounded-2xl items-center text-white hover:text-green-500 transition">
+        <button
+          on:click={scrollToTop}
+          class="h-12 lg:w-[30%] bg-black flex justify-center border-2 p-2 border-white rounded-2xl items-center text-white hover:text-green-500 transition"
+        >
           <h1>SP.</h1>
-        </div>
+        </button>
 
         <!-- About -->
-        <div class="h-full lg:w-[30%] bg-black flex flex-col justify-center border-2 p-2 rounded-2xl border-white items-center text-white hover:text-green-500 transition">
+        <button
+          on:click={scrollToAbout}
+          class="h-full lg:w-[30%] bg-black flex flex-col justify-center border-2 p-2 rounded-2xl border-white items-center text-white hover:text-green-500 transition"
+        >
           <p class="font-bold">About</p>
-        </div>
+        </button>
 
         <!-- Sudo -->
         <button

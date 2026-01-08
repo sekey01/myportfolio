@@ -18,8 +18,8 @@
           imageUrl: techImage
         },
         {
-          title: "Green Future",
-          description: "Environmental sustainability initiatives and education.",
+          title: "Facing Your Fears",
+          description: "Empowering individuals to overcome personal challenges.",
           imageUrl: greenImage
         }
       ];
