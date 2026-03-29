@@ -130,14 +130,11 @@
     aria-modal="true"
     aria-labelledby="modal-title"
     class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fade-in-up"
-    on:click={closeModal}
+    on:click={(e) => { if (e.target === e.currentTarget) closeModal(); }}
     tabindex="-1"
   >
     <div
-      role="document"
       class="bg-gray-800 rounded-2xl p-6 max-w-md w-full shadow-2xl animate-glow"
-      on:click|stopPropagation
-      tabindex="-1"
     >
       <div class="flex justify-between items-center mb-4">
         <p id="modal-title" class="text-2xl font-extrabold text-green-400">{selectedSkill.name}</p>
