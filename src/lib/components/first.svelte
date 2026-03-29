@@ -13,7 +13,9 @@ import phiLogo from '/src/lib/assets/images/phi.png';
     </div>
 
     <a
-      href="mailto:sekeyprince1@gmail.com"
+      href="https://wa.me/233553767177"
+      target="_blank"
+      rel="noopener noreferrer"
       class="font-geom text-white font-bold p-2 border border-green-500 bg-gray-800 rounded-full text-xs lg:text-xl hover:bg-green-900 transition-colors duration-300"
     >
       Get in touch
@@ -39,25 +41,25 @@ import phiLogo from '/src/lib/assets/images/phi.png';
   </div>
 
   <!-- Social proof strip -->
-  <div class="flex flex-row gap-6 lg:gap-12 text-center mt-2">
+  <div class="flex flex-row gap-3 lg:gap-12 text-center mt-2">
     <div>
-      <p class="text-green-400 font-extrabold text-xl lg:text-3xl">10+</p>
-      <p class="text-gray-400 text-xs lg:text-sm">Youth Events</p>
+      <p class="text-green-400 font-extrabold text-base lg:text-3xl">10+</p>
+      <p class="text-gray-400 text-[10px] lg:text-sm">Youth Events</p>
     </div>
     <div class="border-l border-gray-700"></div>
     <div>
-      <p class="text-green-400 font-extrabold text-xl lg:text-3xl">2</p>
-      <p class="text-gray-400 text-xs lg:text-sm">Live Startups</p>
+      <p class="text-green-400 font-extrabold text-base lg:text-3xl">2</p>
+      <p class="text-gray-400 text-[10px] lg:text-sm">Live Startups</p>
     </div>
     <div class="border-l border-gray-700"></div>
     <div>
-      <p class="text-green-400 font-extrabold text-xl lg:text-3xl">300+</p>
-      <p class="text-gray-400 text-xs lg:text-sm">Students Reached</p>
+      <p class="text-green-400 font-extrabold text-base lg:text-3xl">300+</p>
+      <p class="text-gray-400 text-[10px] lg:text-sm">Students Reached</p>
     </div>
     <div class="border-l border-gray-700"></div>
     <div>
-      <p class="text-green-400 font-extrabold text-xl lg:text-3xl">4</p>
-      <p class="text-gray-400 text-xs lg:text-sm">Programs Run</p>
+      <p class="text-green-400 font-extrabold text-base lg:text-3xl">4</p>
+      <p class="text-gray-400 text-[10px] lg:text-sm">Programs Run</p>
     </div>
   </div>
 

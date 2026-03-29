@@ -66,11 +66,11 @@
 
   <!-- Hero tagline -->
   <div class="justify-start lg:justify-center items-center lg:place-items-center flex flex-col mt-2 mb-2 lg:w-1/2 animate-fade-in-up">
-    <p class="font-extrabold text-4xl text-gray-200 animate-glow">
+    <p class="font-extrabold text-2xl lg:text-4xl text-gray-200 animate-glow">
       Helping young Africans turn ideas into <b class="text-green-600 font-extrabold">real products and businesses</b> that create lasting impact.
     </p>
 
-    <p class="text-white animate-fade-in-delay mt-3">
+    <p class="text-white text-sm lg:text-base animate-fade-in-delay mt-3">
       I combine software, speech, and entrepreneurship to equip the next generation. Whether through a keynote, a product launch, or a summit — the mission is the same: purpose-driven growth.
     </p>
   </div>
@@ -78,7 +78,7 @@
   <!-- Skills Set -->
   <div class="text-white shadow-lg bg-gray-900 rounded-2xl p-6 mt-6 w-full lg:w-1/2 animate-fade-in-up">
     <div class="shadow-md shadow-green-400 rounded-2xl p-2 m-2 mb-6 text-center animate-glow">
-      <p class="font-extrabold text-3xl text-green-500 pb-4">Skills & Credentials</p>
+      <p class="font-extrabold text-xl lg:text-3xl text-green-500 pb-4">Skills & Credentials</p>
       <span class="text-white font-normal text-xs">Click on a skill to view proof</span>
     </div>
 
@@ -86,7 +86,7 @@
       {#each skills as skill}
         <button
           on:click={() => openSkill(skill)}
-          class="bg-gray-800 px-4 py-2 rounded-full text-sm lg:text-lg
+          class="bg-gray-800 px-3 py-1.5 lg:px-4 lg:py-2 rounded-full text-xs lg:text-lg
                  hover:bg-gray-700 hover:scale-105 transition-all duration-300
                  animate-fade-in-delay cursor-pointer border border-gray-700 hover:border-green-500"
         >
@@ -96,8 +96,8 @@
     </div>
 
     <!-- About Me -->
-    <div class="text-left p-6 text-white mt-6 bg-gray-800 rounded-2xl shadow-md shadow-green-400 animate-fade-in-up space-y-4">
-      <h1 class="font-extrabold text-3xl text-green-400 animate-glow text-center">About Me</h1>
+    <div class="text-left p-4 lg:p-6 text-white text-sm lg:text-base mt-6 bg-gray-800 rounded-2xl shadow-md shadow-green-400 animate-fade-in-up space-y-4">
+      <h1 class="font-extrabold text-xl lg:text-3xl text-green-400 animate-glow text-center">About Me</h1>
 
       <p>
         I help young Africans turn ideas into real products and businesses. I'm a builder, speaker, and entrepreneur from Ghana — and I believe the next wave of change in Africa will be led by young people who combine technical skill with purpose.
