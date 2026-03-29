@@ -66,7 +66,7 @@
 
   <!-- Hero tagline -->
   <div class="justify-start lg:justify-center items-center lg:place-items-center flex flex-col mt-2 mb-2 lg:w-1/2 animate-fade-in-up">
-    <p class="font-extrabold text-2xl lg:text-4xl text-gray-200 animate-glow">
+    <p class="font-extrabold text-2xl lg:text-4xl text-gray-200">
       Helping young Africans turn ideas into <b class="text-green-600 font-extrabold">real products and businesses</b> that create lasting impact.
     </p>
 
@@ -77,7 +77,7 @@
 
   <!-- Skills Set -->
   <div class="text-white shadow-lg bg-gray-900 rounded-2xl p-6 mt-6 w-full lg:w-1/2 animate-fade-in-up">
-    <div class="shadow-md shadow-green-400 rounded-2xl p-2 m-2 mb-6 text-center animate-glow">
+    <div class="shadow-md shadow-green-400 rounded-2xl p-2 m-2 mb-6 text-center">
       <p class="font-extrabold text-xl lg:text-3xl text-green-500 pb-4">Skills & Credentials</p>
       <span class="text-white font-normal text-xs">Click on a skill to view proof</span>
     </div>
@@ -97,7 +97,7 @@
 
     <!-- About Me -->
     <div class="text-left p-4 lg:p-6 text-white text-sm lg:text-base mt-6 bg-gray-800 rounded-2xl shadow-md shadow-green-400 animate-fade-in-up space-y-4">
-      <h1 class="font-extrabold text-xl lg:text-3xl text-green-400 animate-glow text-center">About Me</h1>
+      <h1 class="font-extrabold text-xl lg:text-3xl text-green-400 text-center">About Me</h1>
 
       <p>
         I help young Africans turn ideas into real products and businesses. I'm a builder, speaker, and entrepreneur from Ghana — and I believe the next wave of change in Africa will be led by young people who combine technical skill with purpose.
@@ -134,7 +134,7 @@
     tabindex="-1"
   >
     <div
-      class="bg-gray-800 rounded-2xl p-6 max-w-md w-full shadow-2xl animate-glow"
+      class="bg-gray-800 rounded-2xl p-6 max-w-md w-full shadow-2xl"
     >
       <div class="flex justify-between items-center mb-4">
         <p id="modal-title" class="text-2xl font-extrabold text-green-400">{selectedSkill.name}</p>
@@ -169,13 +169,6 @@
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  @keyframes glow {
-    0%   { text-shadow: 0 0 0px #22c55e; }
-    50%  { text-shadow: 0 0 10px #22c55e; }
-    100% { text-shadow: 0 0 0px #22c55e; }
-  }
-
-  .animate-fade-in-up   { animation: fadeInUp 0.8s ease-out both; }
+  .animate-fade-in-up    { animation: fadeInUp 0.8s ease-out both; }
   .animate-fade-in-delay { animation: fadeInUp 1.2s ease-out both; }
-  .animate-glow          { animation: glow 2.5s ease-in-out infinite; }
 </style>
