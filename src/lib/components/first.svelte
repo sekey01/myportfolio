@@ -53,7 +53,9 @@ import { theme } from '$lib/stores/theme';
       <h1 class="text-3xl lg:text-6xl font-extrabold text-white leading-tight">
         Speaker.<br>
         Builder.<br>
-        <span class="text-green-400">Entrepreneur.</span>
+        <span class="block font-geom font-thin tracking-[0.22em] text-green-400 text-2xl lg:text-5xl mt-1">
+          entrepreneur.
+        </span>
       </h1>
       <p class="text-gray-400 text-sm lg:text-lg max-w-lg">
         Helping young Africans turn ideas into real products and businesses that create lasting impact.

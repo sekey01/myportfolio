@@ -151,7 +151,7 @@
     position: absolute;
   }
 
-  /* Base shape — transparent with neon white glow */
+  /* Base shape — transparent with neon white glow, blurred so text is never obscured */
   .shape {
     background: transparent;
     border: 1.5px solid rgba(255, 255, 255, 0.75);
@@ -161,6 +161,7 @@
       0 0 22px rgba(255, 255, 255, 0.35),
       0 0 45px rgba(255, 255, 255, 0.15);
     animation: pulseGlow 3s ease-in-out infinite;
+    filter: blur(3px);
   }
 
   /* Green neon variant */
@@ -172,6 +173,7 @@
       0 0 22px rgba(34, 197, 94, 0.35),
       0 0 45px rgba(34, 197, 94, 0.15);
     animation: pulseGlowGreen 3s ease-in-out infinite;
+    filter: blur(3px);
   }
 
   .circle  { border-radius: 50%; }
