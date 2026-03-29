@@ -3,6 +3,7 @@
 	import First from "./first.svelte";
 	import Projects from "./projects.svelte";
 	import Second from "./second.svelte";
+	import { theme } from '$lib/stores/theme';
 
 	let showTerminal = false;
 
@@ -19,7 +20,7 @@
 
   <!-- ░░ Background tech shapes ░░ -->
   <!-- All shapes use wrapper pattern: wrapper floats, inner shape glows -->
-  <div class="fixed inset-0 pointer-events-none overflow-hidden" style="z-index:1;">
+  <div class="fixed inset-0 pointer-events-none overflow-hidden" class:shapes-light={$theme === 'light'} style="z-index:1;">
 
     <!-- Circle — top-left (green) -->
     <div class="sw" style="top:4%;left:2%;animation:floatA 10s ease-in-out infinite;">
@@ -176,6 +177,25 @@
   .circle  { border-radius: 50%; }
   .diamond { transform: rotate(45deg); }
 
+  /* ── Light theme shape overrides ── */
+  .shapes-light .shape {
+    border-color: rgba(15, 23, 42, 0.2);
+    box-shadow:
+      0 0 3px  rgba(15, 23, 42, 0.25),
+      0 0 8px  rgba(15, 23, 42, 0.12),
+      0 0 18px rgba(15, 23, 42, 0.06);
+    animation: pulseGlowDark 3s ease-in-out infinite;
+  }
+
+  .shapes-light .shape.green {
+    border-color: rgba(22, 163, 74, 0.4);
+    box-shadow:
+      0 0 3px  rgba(22, 163, 74, 0.45),
+      0 0 8px  rgba(22, 163, 74, 0.25),
+      0 0 18px rgba(22, 163, 74, 0.12);
+    animation: pulseGlowGreenDark 3s ease-in-out infinite;
+  }
+
   /* ── Keyframes — :global so they're reachable from inline styles ── */
   :global {
     @keyframes floatA {
@@ -233,6 +253,34 @@
           0 0 40px rgba(34,197,94,0.55),
           0 0 70px rgba(34,197,94,0.25);
         border-color: rgba(34,197,94,1);
+      }
+    }
+    @keyframes pulseGlowDark {
+      0%, 100% {
+        box-shadow:
+          0 0 3px rgba(15,23,42,0.25),
+          0 0 8px rgba(15,23,42,0.12);
+        border-color: rgba(15,23,42,0.2);
+      }
+      50% {
+        box-shadow:
+          0 0 6px rgba(15,23,42,0.4),
+          0 0 16px rgba(15,23,42,0.22);
+        border-color: rgba(15,23,42,0.38);
+      }
+    }
+    @keyframes pulseGlowGreenDark {
+      0%, 100% {
+        box-shadow:
+          0 0 3px rgba(22,163,74,0.45),
+          0 0 8px rgba(22,163,74,0.22);
+        border-color: rgba(22,163,74,0.4);
+      }
+      50% {
+        box-shadow:
+          0 0 6px rgba(22,163,74,0.65),
+          0 0 16px rgba(22,163,74,0.38);
+        border-color: rgba(22,163,74,0.65);
       }
     }
   }

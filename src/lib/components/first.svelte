@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
 import phiLogo from '/src/lib/assets/images/phi.png';
+import { theme } from '$lib/stores/theme';
 </script>
 
 <div class="flex flex-col gap-8">
@@ -10,14 +11,38 @@ import phiLogo from '/src/lib/assets/images/phi.png';
       <p class="font-bold text-white">sekeyprince.</p>
       <p class="font-thin text-green-500">com</p>
     </div>
-    <a
-      href="https://wa.me/233553767177"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="font-geom text-white font-bold px-4 py-2 border border-green-500 bg-gray-800 rounded-full text-xs lg:text-xl hover:bg-green-900 transition-colors duration-300"
-    >
-      Get in touch
-    </a>
+    <!-- Theme toggle + CTA grouped right -->
+    <div class="flex items-center gap-2">
+
+      <button
+        on:click={theme.toggle}
+        aria-label="Toggle theme"
+        class="h-9 w-9 lg:h-11 lg:w-11 flex items-center justify-center rounded-full border border-gray-700 bg-gray-800 hover:border-green-500 transition-colors duration-300"
+      >
+        {#if $theme === 'dark'}
+          <!-- Sun icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 lg:h-5 lg:w-5 text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+        {:else}
+          <!-- Moon icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 lg:h-5 lg:w-5 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        {/if}
+      </button>
+
+      <a
+        href="https://wa.me/233553767177"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="font-geom text-white font-bold px-4 py-2 border border-green-500 bg-gray-800 rounded-full text-xs lg:text-xl hover:bg-green-900 transition-colors duration-300"
+      >
+        Get in touch
+      </a>
+
+    </div>
   </div>
 
   <!-- Hero body: stacked on mobile, two-column on desktop -->
