@@ -1,14 +1,21 @@
-<script>
-  let show = true;
+<script lang="ts">
+  import { createEventDispatcher } from 'svelte';
+
+  const dispatch = createEventDispatcher();
+
   let input = '';
-  let history = [
+  let history: string[] = [
     '$ booting system...',
     '$ loading vision',
     '$ ready_'
   ];
   let currentDir = '~';
-  let inputRef = null;
-  let terminalRef = null;
+  let inputRef: HTMLInputElement | null = null;
+  let terminalRef: HTMLElement | null = null;
+
+  function closeTerminal() {
+    dispatch('close');
+  }
 
   const directories = {
     '~': {
@@ -21,13 +28,15 @@
       content: [
         ' ABOUT SEKEY PRINCE ',
         '',
-        'Name: Sekey Prince',
-        'Role: Full Stack Developer',
-        'Location: Accra, Ghana',
-        'Experience: 1+ years',
+        'Name:       Prince Sekey',
+        'Role:       Speaker · Builder · Entrepreneur',
+        'Location:   Accra, Ghana',
+        'Education:  BSc Computer Engineering, GCTU',
         '',
-        'I am a public speaker and developer. I build scalable web and mobile applications with modern technologies.',
-        'Passionate about clean code and user experience.',
+        'I help young Africans turn ideas into real products and businesses.',
+        'I combine software, speech, and entrepreneurship to equip the next generation.',
+        '',
+        'Stats: 10+ youth events · 2 live startups · 300+ students reached',
         '',
         'Type "cd .." to go back'
       ]
@@ -75,10 +84,10 @@
       content: [
         ' CONTACT INFO ',
         '',
-        'Email: sekeyprince1@.com',
+        'Email: sekeyprince1@gmail.com',
         'GitHub: github.com/sekeyprince',
         'LinkedIn: linkedin.com/in/sekey01',
-        'X % Instagram: @sekeyprince',
+        'X & Instagram: @sekeyprince',
         'Phone: +233 55 376 7177',
         '',
         'Feel free to reach out for collaborations!',
@@ -92,15 +101,15 @@
     terminalRef.scrollTop = terminalRef.scrollHeight;
   }
 
-  function handleKeyDown(e) {
-    if (e.key === 'Escape') show = false;
+  function handleKeyDown(e: KeyboardEvent) {
+    if (e.key === 'Escape') closeTerminal();
   }
 
   function handleCommand() {
     if (!input.trim()) return;
 
     const cmd = input.trim().toLowerCase();
-    let newHistory = [...history, `${currentDir} $ ${input}`];
+    let newHistory: string[] = [...history, `${currentDir} $ ${input}`];
 
     const parts = cmd.split(' ');
     const command = parts[0];
@@ -151,7 +160,7 @@
         break;
 
       case 'exit':
-        show = false;
+        closeTerminal();
         return;
 
       default:
@@ -163,22 +172,19 @@
     input = '';
   }
 
-  function handleKeyPress(e) {
-    if (e.key === 'Enter') {
-      handleCommand();
-    }
+  function handleKeyPress(e: KeyboardEvent) {
+    if (e.key === 'Enter') handleCommand();
   }
 </script>
 
 <svelte:window on:keydown={handleKeyDown} />
 
-{#if show}
-  <div
-    class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-    on:click={() => (show = false)}
-    role="button"
-    tabindex="0"
-  >
+<div
+  class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+  on:click={closeTerminal}
+  role="button"
+  tabindex="0"
+>
     <div
       class="bg-black text-green-500 w-full md:w-[70%] lg:w-[60%] h-[80%] max-h-[600px]
              rounded-2xl shadow-2xl border border-green-500/30
@@ -194,7 +200,7 @@
         </div>
         <button
           class="text-red-400 hover:text-red-600 transition"
-          on:click={() => (show = false)}
+          on:click={closeTerminal}
         >
           ✕
         </button>
@@ -230,4 +236,3 @@
       </div>
     </div>
   </div>
-{/if}
