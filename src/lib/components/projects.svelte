@@ -29,11 +29,13 @@
   ];
 </script>
 
-<div class="justify-center items-center flex flex-col mt-10 mb-20 font-extrabold p-4">
-  <p class="text-green-600 text-4xl justify-center pb-2">Programs</p>
-  <p class="text-gray-400 font-normal text-sm pb-8 text-center">Initiatives and events designed to equip, inspire, and move people to action.</p>
+<div class="w-full mt-10 mb-20 p-4 lg:px-8">
+  <p class="text-green-600 text-3xl lg:text-4xl font-extrabold pb-2">Programs</p>
+  <p class="text-gray-400 font-normal text-sm pb-10">Initiatives and events designed to equip, inspire, and move people to action.</p>
 
-  {#each programs as program}
-    <Scrollcard title={program.title} description={program.description} imageUrl={program.imageUrl} />
-  {/each}
+  <div class="flex flex-col gap-10 lg:gap-16">
+    {#each programs as program}
+      <Scrollcard title={program.title} description={program.description} imageUrl={program.imageUrl} />
+    {/each}
+  </div>
 </div>

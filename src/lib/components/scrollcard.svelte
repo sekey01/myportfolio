@@ -7,31 +7,42 @@
   onMount(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) visible = true;
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
 
     if (cardRef) observer.observe(cardRef);
     return () => observer.disconnect();
   });
 
-  export let title = "Eli Thompson";
-  export let description = "Creative Designer";
-  export let imageUrl = "/src/lib/assets/images/post1.jpeg";
+  export let title = '';
+  export let description = '';
+  export let imageUrl = '';
 </script>
 
-<div bind:this={cardRef} class="card transition-all duration-700 pb-20" class:opacity-0={!visible} class:translate-y-10={!visible}>
-  <div class="relative group">
-    <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-green-500 rounded-2xl blur-lg opacity-50"></div>
-    <div class="relative h-80 w-80 bg-gray-800 rounded-2xl p-2">
-      <img 
-        src={imageUrl} 
-        alt={title} 
-        class="w-full h-full object-cover rounded-xl rotate-3 hover:rotate-0 transition-transform duration-300"
-      />
+<div
+  bind:this={cardRef}
+  class="card w-full transition-all duration-700 pb-12"
+  class:opacity-0={!visible}
+  class:translate-y-10={!visible}
+>
+  <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+
+    <!-- Image -->
+    <div class="relative group shrink-0">
+      <div class="absolute inset-0 bg-linear-to-r from-purple-500 to-green-500 rounded-2xl blur-xl opacity-50"></div>
+      <div class="relative h-72 w-72 lg:h-80 lg:w-80 bg-gray-800 rounded-2xl p-2">
+        <img
+          src={imageUrl}
+          alt={title}
+          class="w-full h-full object-cover rounded-xl rotate-3 hover:rotate-0 transition-transform duration-300"
+        />
+      </div>
     </div>
-  </div>
-  
-  <div class="mt-6 text-center">
-    <p class="text-4xl font-extrabold text-white">{title}</p>
-    <p class="text-gray-400 mt-2">{description}</p>
+
+    <!-- Text — centered on mobile, left-aligned on desktop -->
+    <div class="flex-1 text-center lg:text-left">
+      <p class="text-3xl lg:text-4xl font-extrabold text-white">{title}</p>
+      <p class="text-gray-400 mt-3 text-sm lg:text-base leading-relaxed">{description}</p>
+    </div>
+
   </div>
 </div>
