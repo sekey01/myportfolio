@@ -28,8 +28,8 @@
 
     <!-- Image -->
     <div class="relative group shrink-0">
-      <div class="absolute inset-0 bg-linear-to-r from-purple-500 to-green-500 rounded-2xl blur-xl opacity-50"></div>
-      <div class="relative h-72 w-72 lg:h-80 lg:w-80 bg-gray-800 rounded-2xl p-2">
+      <div class="absolute inset-0 bg-linear-to-r from-rose-400 to-rose-600 rounded-2xl blur-xl opacity-30"></div>
+      <div class="relative h-72 w-72 lg:h-80 lg:w-80 bg-white border border-slate-200 rounded-2xl p-2 shadow-sm">
         <img
           src={imageUrl}
           alt={title}
@@ -38,10 +38,10 @@
       </div>
     </div>
 
-    <!-- Text — centered on mobile, left-aligned on desktop -->
+    <!-- Text -->
     <div class="flex-1 text-center lg:text-left">
-      <p class="text-3xl lg:text-4xl font-extrabold text-white">{title}</p>
-      <p class="text-gray-400 mt-3 text-sm lg:text-base leading-relaxed">{description}</p>
+      <p class="text-3xl lg:text-4xl font-extrabold text-slate-900">{title}</p>
+      <p class="text-slate-500 mt-3 text-sm lg:text-base leading-relaxed">{description}</p>
     </div>
 
   </div>
