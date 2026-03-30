@@ -9,10 +9,10 @@ import { theme } from '$lib/stores/theme';
   <div class="fixed top-3 left-1/2 -translate-x-1/2 z-30
               w-[95%] lg:w-[80%]
               flex flex-row justify-between items-center gap-4
-              px-4 py-3 rounded-2xl
-              bg-black/40 backdrop-blur-xl
-              border border-white/10
-              shadow-xl shadow-black/30">
+              px-4 py-3 rounded-xl
+              bg-transparent backdrop-blur-lg
+              border border-white/30
+              shadow-xl transition">
     <div class="flex flex-row gap-0 text-sm lg:text-2xl">
       <p class="font-bold text-white">sekeyprince.</p>
       <p class="font-thin text-green-500">com</p>
