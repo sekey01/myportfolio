@@ -186,17 +186,17 @@
   tabindex="0"
 >
     <div
-      class="bg-black text-rose-400 w-full md:w-[70%] lg:w-[60%] h-[80%] max-h-[600px]
-             rounded-2xl shadow-2xl border border-rose-400/30
+      class="bg-black text-green-500 w-full md:w-[70%] lg:w-[60%] h-[80%] max-h-[600px]
+             rounded-2xl shadow-2xl border border-green-500/30
              p-4 font-mono relative flex flex-col"
       on:click={(e) => e.stopPropagation()}
       role="dialog"
       aria-modal="true"
     >
-      <div class="flex justify-between items-center border-b border-rose-400/20 pb-2 mb-3">
+      <div class="flex justify-between items-center border-b border-green-500/20 pb-2 mb-3">
         <div class="flex items-center space-x-2">
           <span class="text-sm opacity-80">sudo terminal</span>
-          <span class="text-xs text-rose-300/60">[{currentDir}]</span>
+          <span class="text-xs text-green-400/60">[{currentDir}]</span>
         </div>
         <button
           class="text-red-400 hover:text-red-600 transition"
@@ -211,27 +211,27 @@
         class="flex-1 overflow-y-auto space-y-1 text-sm mb-3"
       >
         {#each history as line, i (i)}
-          <p class={line.startsWith('$') ? 'text-rose-300' : ''}>
+          <p class={line.startsWith('$') ? 'text-green-400' : ''}>
             {line}
           </p>
         {/each}
       </div>
 
-      <div class="flex items-center space-x-2 border-t border-rose-400/20 pt-2">
-        <span class="text-rose-300">{currentDir} $</span>
+      <div class="flex items-center space-x-2 border-t border-green-500/20 pt-2">
+        <span class="text-green-400">{currentDir} $</span>
         <input
           bind:this={inputRef}
           type="text"
           bind:value={input}
           on:keypress={handleKeyPress}
-          class="flex-1 bg-transparent text-rose-400 outline-none font-mono"
+          class="flex-1 bg-transparent text-green-500 outline-none font-mono"
           placeholder="Type 'help' for commands..."
           autofocus
         />
         <span class="animate-pulse">|</span>
       </div>
 
-      <div class="text-xs text-rose-400/40 mt-2 text-center">
+      <div class="text-xs text-green-500/40 mt-2 text-center">
         Try: cd about | cd projects | cd skills | cd contact | help | cls
       </div>
     </div>

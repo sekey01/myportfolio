@@ -3,6 +3,7 @@
 	import First from "./first.svelte";
 	import Projects from "./projects.svelte";
 	import Second from "./second.svelte";
+	import { theme } from '$lib/stores/theme';
 
 	let showTerminal = false;
 
@@ -17,61 +18,75 @@
 
 <div class="relative" id="top">
 
-  <!-- ░░ Background shapes — float only, no glow ░░ -->
-  <div class="fixed inset-0 pointer-events-none overflow-hidden" style="z-index:1;">
+  <!-- ░░ Background tech shapes ░░ -->
+  <!-- All shapes use wrapper pattern: wrapper floats, inner shape glows -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden" class:shapes-light={$theme === 'light'} style="z-index:1;">
 
-    <!-- Circle — top-left -->
+    <!-- Circle — top-left (green) -->
     <div class="sw" style="top:4%;left:2%;animation:floatA 10s ease-in-out infinite;">
-      <div class="shape circle" style="width:260px;height:260px;"></div>
+      <div class="shape circle green" style="width:260px;height:260px;"></div>
     </div>
-    <!-- Diamond — top-right (rose) -->
+
+    <!-- Diamond — top-right -->
     <div class="sw" style="top:5%;right:4%;animation:floatB 14s ease-in-out infinite 1s;">
-      <div class="shape diamond rose" style="width:170px;height:170px;"></div>
+      <div class="shape diamond" style="width:170px;height:170px;"></div>
     </div>
-    <!-- Small circle — mid-left (rose) -->
+
+    <!-- Small circle — mid-left (green) -->
     <div class="sw" style="top:41%;left:1.5%;animation:floatC 11s ease-in-out infinite 2s;">
-      <div class="shape circle rose" style="width:85px;height:85px;"></div>
+      <div class="shape circle green" style="width:85px;height:85px;"></div>
     </div>
+
     <!-- Rounded rect — mid-right -->
     <div class="sw" style="top:50%;right:3%;animation:floatD 9s ease-in-out infinite 3s;">
       <div class="shape" style="width:155px;height:65px;border-radius:8px;"></div>
     </div>
-    <!-- Medium circle — lower-center (rose) -->
+
+    <!-- Medium circle — lower-center (green) -->
     <div class="sw" style="top:71%;left:44%;animation:floatE 13s ease-in-out infinite 0.5s;">
-      <div class="shape circle rose" style="width:145px;height:145px;"></div>
+      <div class="shape circle green" style="width:145px;height:145px;"></div>
     </div>
+
     <!-- Diamond — bottom-left -->
     <div class="sw" style="top:79%;left:6%;animation:floatA 12s ease-in-out infinite 4s;">
       <div class="shape diamond" style="width:115px;height:115px;"></div>
     </div>
+
     <!-- Small square — top-center -->
     <div class="sw" style="top:7%;left:51%;animation:floatB 8s ease-in-out infinite 1.5s;">
       <div class="shape" style="width:62px;height:62px;border-radius:6px;"></div>
     </div>
+
     <!-- Large diamond — bottom-right -->
     <div class="sw" style="top:82%;right:5%;animation:floatC 17s ease-in-out infinite 2.5s;">
       <div class="shape diamond" style="width:200px;height:200px;"></div>
     </div>
-    <!-- Thin horizontal bar — upper-mid (rose) -->
+
+    <!-- Thin horizontal bar — upper-mid (green) -->
     <div class="sw" style="top:27%;left:21%;animation:floatD 12s ease-in-out infinite 3.5s;">
-      <div class="shape rose" style="width:175px;height:32px;border-radius:4px;"></div>
+      <div class="shape green" style="width:175px;height:32px;border-radius:4px;"></div>
     </div>
-    <!-- Circle — right-center (rose) -->
+
+    <!-- Circle — right-center (green) -->
     <div class="sw" style="top:34%;right:9%;animation:floatE 10s ease-in-out infinite 1s;">
-      <div class="shape circle rose" style="width:95px;height:95px;"></div>
+      <div class="shape circle green" style="width:95px;height:95px;"></div>
     </div>
+
     <!-- Small diamond — lower-mid -->
     <div class="sw" style="top:59%;left:28%;animation:floatA 13s ease-in-out infinite 5s;">
       <div class="shape diamond" style="width:75px;height:75px;"></div>
     </div>
-    <!-- Rounded rect — upper-right -->
+
+    <!-- Rounded rect — upper-right area -->
     <div class="sw" style="top:19%;right:19%;animation:floatB 16s ease-in-out infinite 0s;">
       <div class="shape" style="width:105px;height:48px;border-radius:6px;"></div>
     </div>
+
     <!-- Thin vertical bar — far right -->
     <div class="sw" style="top:62%;right:1%;animation:floatC 9s ease-in-out infinite 2s;">
       <div class="shape" style="width:30px;height:140px;border-radius:4px;"></div>
     </div>
+
     <!-- Circle — bottom-center-left -->
     <div class="sw" style="top:88%;left:33%;animation:floatD 11s ease-in-out infinite 4.5s;">
       <div class="shape circle" style="width:68px;height:68px;"></div>
@@ -80,7 +95,7 @@
   </div>
   <!-- ░░ end shapes ░░ -->
 
-  <!-- Content -->
+  <!-- Content sits above shapes -->
   <div class="relative flex flex-col gap-2 lg:gap-12" style="z-index:2;">
     <First/>
 
@@ -94,28 +109,28 @@
     <div
       class="flex-row fixed bottom-4 left-1/2 -translate-x-1/2
       w-[90%] lg:w-[50%] flex justify-center items-center
-      bg-white/80 backdrop-blur-lg px-5 py-3 rounded-xl
-      shadow-lg border border-slate-200 z-40"
+      bg-transparent backdrop-blur-lg text-black px-5 py-3 rounded-xl
+      shadow-xl border border-white/30 transition fill-transparent z-40"
     >
       <div class="grid grid-cols-3 w-full gap-2 justify-items-center items-center">
 
         <button
           on:click={scrollToTop}
-          class="h-12 lg:w-[30%] bg-white flex justify-center border border-slate-300 p-2 rounded-2xl items-center text-slate-900 hover:text-rose-600 hover:border-rose-400 transition"
+          class="h-12 lg:w-[30%] bg-black flex justify-center border-2 p-2 border-white rounded-2xl items-center text-white hover:text-green-500 transition"
         >
           <h1>SP.</h1>
         </button>
 
         <button
           on:click={scrollToAbout}
-          class="h-full lg:w-[30%] bg-white flex flex-col justify-center border border-slate-300 p-2 rounded-2xl items-center text-slate-900 hover:text-rose-600 hover:border-rose-400 transition"
+          class="h-full lg:w-[30%] bg-black flex flex-col justify-center border-2 p-2 rounded-2xl border-white items-center text-white hover:text-green-500 transition"
         >
           <p class="font-bold">About</p>
         </button>
 
         <button
           on:click={() => showTerminal = true}
-          class="bg-rose-600 h-full lg:w-[40%] flex justify-center border border-rose-600 p-2 rounded-2xl items-center text-white hover:bg-rose-700 transition"
+          class="bg-green-900 h-full lg:w-[40%] flex justify-center border-2 p-2 border-white rounded-2xl items-center text-white hover:text-green-500 transition"
         >
           <p>$ sudo_<span class="animate-pulse text-xl">|</span></p>
         </button>
@@ -131,23 +146,37 @@
 </div>
 
 <style>
-  .sw { position: absolute; }
+  /* Shape wrapper — handles position + float animation */
+  .sw {
+    position: absolute;
+  }
 
-  /* Base shape — subtle slate border, blurred into background */
+  /* Base shape — no glow, just a faint border, blurred into the background */
   .shape {
     background: transparent;
-    border: 1px solid rgba(100, 116, 139, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     filter: blur(6px);
   }
 
-  /* Rose accent variant */
-  .shape.rose {
-    border-color: rgba(225, 29, 72, 0.25);
+  /* Green variant */
+  .shape.green {
+    border-color: rgba(34, 197, 94, 0.35);
+    filter: blur(6px);
   }
 
   .circle  { border-radius: 50%; }
   .diamond { transform: rotate(45deg); }
 
+  /* ── Light theme shape overrides ── */
+  .shapes-light .shape {
+    border-color: rgba(15, 23, 42, 0.18);
+  }
+
+  .shapes-light .shape.green {
+    border-color: rgba(22, 163, 74, 0.3);
+  }
+
+  /* ── Keyframes — :global so they're reachable from inline styles ── */
   :global {
     @keyframes floatA {
       0%, 100% { transform: translateY(0); }

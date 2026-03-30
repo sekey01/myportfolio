@@ -30,8 +30,8 @@
 </script>
 
 <div class="w-full mt-10 mb-20 p-4 lg:px-8">
-  <p class="text-rose-600 text-3xl lg:text-4xl font-extrabold pb-2">Programs</p>
-  <p class="text-slate-500 font-normal text-sm pb-10">Initiatives and events designed to equip, inspire, and move people to action.</p>
+  <p class="text-green-600 text-3xl lg:text-4xl font-extrabold pb-2">Programs</p>
+  <p class="text-gray-400 font-normal text-sm pb-10">Initiatives and events designed to equip, inspire, and move people to action.</p>
 
   <div class="flex flex-col gap-10 lg:gap-16">
     {#each programs as program}
