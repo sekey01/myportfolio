@@ -23,7 +23,7 @@
       name: "Flutter Mobile Developer",
       proofs: [
         { title: "Promptus App", url: "https://applestore.com/promptus" },
-        { title: "MealMate Delivery App", url: "https://mealmmates.click" }
+        { title: "MealMate Delivery App", url: "https://www.mealmates.click" }
       ]
     },
     {
@@ -42,7 +42,7 @@
     {
       name: "Public Speaking",
       proofs: [
-        { title: "Youth Conferences & Summits", url: "https://linkedin.com/in/sekey01" }
+        { title: "Youth Conferences & Summits", url: "https://linkedin.com/in/sekeyprince" }
       ]
     }
   ];
