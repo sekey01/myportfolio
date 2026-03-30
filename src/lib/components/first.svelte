@@ -6,11 +6,7 @@ import { theme } from '$lib/stores/theme';
 <div class="flex flex-col gap-8">
 
   <!-- Top nav row -->
-  <div class="sticky top-2 z-30 flex flex-row justify-between items-center w-full gap-4
-              px-4 py-3 rounded-2xl
-              bg-black/40 backdrop-blur-xl
-              border border-white/10
-              shadow-xl shadow-black/30">
+  <div class="flex flex-row justify-between items-center w-full gap-4">
     <div class="flex flex-row gap-0 text-sm lg:text-2xl">
       <p class="font-bold text-white">sekeyprince.</p>
       <p class="font-thin text-green-500">com</p>
