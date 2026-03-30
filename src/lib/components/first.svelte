@@ -6,7 +6,13 @@ import { theme } from '$lib/stores/theme';
 <div class="flex flex-col gap-8">
 
   <!-- Top nav row -->
-  <div class="flex flex-row justify-between items-center w-full gap-4">
+  <div class="fixed top-3 left-1/2 -translate-x-1/2 z-30
+              w-[95%] lg:w-[80%]
+              flex flex-row justify-between items-center gap-4
+              px-4 py-3 rounded-2xl
+              bg-black/40 backdrop-blur-xl
+              border border-white/10
+              shadow-xl shadow-black/30">
     <div class="flex flex-row gap-0 text-sm lg:text-2xl">
       <p class="font-bold text-white">sekeyprince.</p>
       <p class="font-thin text-green-500">com</p>
@@ -44,6 +50,9 @@ import { theme } from '$lib/stores/theme';
 
     </div>
   </div>
+
+  <!-- Spacer to push hero below fixed nav -->
+  <div class="h-16 lg:h-20"></div>
 
   <!-- Hero body: stacked on mobile, two-column on desktop -->
   <div class="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-20 lg:min-h-[55vh]">
