@@ -7,7 +7,7 @@ function createTheme() {
     ? (localStorage.getItem('theme') as Theme | null)
     : null;
 
-  const { subscribe, update } = writable<Theme>(stored ?? 'dark');
+  const { subscribe, update } = writable<Theme>(stored ?? 'light');
 
   return {
     subscribe,
